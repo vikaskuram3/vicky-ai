@@ -1,179 +1,227 @@
-# 🛡️ AI Disaster Mapper: AI-Powered Disaster Intelligence & Emergency Management Platform
+# 🏢 Narasimha PG Hostel Manager v3.0
 
-> **A Centralized, AI-Driven Geospatial Intelligence System for Real-Time Hazard Monitoring, Risk Prediction, Damage Assessment, and Emergency Logistics Routing.**
+> **Enterprise PG Hostel & Bed Management SaaS Platform for Hyderabad, Telangana, India**
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.25%2B-FF4B4B.svg)
-![SQLite](https://img.shields.io/badge/Database-SQLite3-003B57.svg)
-![Folium](https://img.shields.io/badge/GIS-Folium%20%26%20Leaflet-77B829.svg)
-![Plotly](https://img.shields.io/badge/Analytics-Plotly-3F4F75.svg)
-![Machine Learning](https://img.shields.io/badge/AI-Machine%20Learning-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Status](https://img.shields.io/badge/Status-Production%20Ready-emerald.svg)
+![Version](https://img.shields.io/badge/Version-3.0.0-blue.svg)
+![Node](https://img.shields.io/badge/Node.js-18%2B-green.svg)
+![Database](https://img.shields.io/badge/Database-PostgreSQL%20%2F%20LocalStorage-0284c7.svg)
+![Tests](https://img.shields.io/badge/Tests-16%2F16%20Passing-success.svg)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 ---
 
-## 📌 Executive Summary
+## 📌 Overview
 
-**AI Disaster Mapper** is an enterprise-grade disaster management application engineered to monitor, analyze, and visualize natural disasters including **Floods**, **Earthquakes**, **Cyclones**, **Landslides**, **Forest Fires**, and **Droughts**.
+**Narasimha PG Hostel Manager** is a complete, commercial-grade, multi-property PG hostel management software engineered for paying guest (PG) owners and student residents in Hyderabad, Telangana, India.
 
-The platform ingests real-time and historical disaster data, renders geospatial hazard footprints on interactive Folium maps, estimates risk using multi-hazard Machine Learning models, models damage to human populations and agriculture, and coordinates emergency logistics by finding the nearest hospitals, relief shelters, and response command posts.
+It manages the entire lifecycle of multi-property hostel operations:
+- Multiple hostel properties with complete locality addresses, contact info, and Google Maps integration.
+- Separate floor management from Ground Floor to 10th Floor + custom floors.
+- Granular bed slot tracking with overbooking and duplicate booking prevention.
+- Sharing-wise pricing (1 to 5 sharing) with **permanent agreed rent protection** for existing students.
+- Full student check-in, bed assignment, emergency contact tracking, and 1-click checkout.
+- Automated daily rent expiry reminders in **Asia/Kolkata** timezone (1 day before & on due date).
+- Payment recording (UPI, Cash, Bank Transfer), partial payment tracking, next due date advancement, and official printable receipt generation (`RCP-2026-XXX`).
+- Executive owner analytics dashboard and a dedicated Student Resident Portal.
+
+---
+
+## 🏗️ Architecture
 
 ```mermaid
 flowchart TD
-    subgraph Data Ingestion Layer
-        API1[USGS Real-Time Earthquake API] --> Ingest[Data Processor & Normalizer]
-        API2[NASA EONET Satellite Wildfire & Storm Feed] --> Ingest
-        API3[Open-Meteo Severe Meteorological Feed] --> Ingest
-        DB_HIST[(Historical SQLite Database: disaster_database.db)] --> Ingest
+    subgraph MultiTenantAuth["Authentication & Role Layer"]
+        A[User Login / Registration] -->|Role: Hostel Owner| B[Owner Administration Portal]
+        A -->|Role: Student Resident| C[Student Resident Portal]
     end
 
-    subgraph Analytical & AI Engine
-        Ingest --> ML[Multi-Hazard AI Risk Predictor]
-        Ingest --> DA[Damage & Agricultural Loss Estimator]
-        Ingest --> ER[Emergency Route & Relief Resource Planner]
-        Ingest --> SQL[SQL Window Functions & Vulnerability Matrix]
+    subgraph OwnerCore["Owner Management Modules"]
+        B --> D[Dashboard & Real-Time KPI Analytics]
+        B --> E[Hostel Properties & Google Maps]
+        B --> F[Floor Hierarchy: Ground to 10th Floor]
+        B --> G[Rooms & Beds Management]
+        B --> H[Sharing-Wise Pricing Configuration]
+        B --> I[Student Directory & Admissions]
+        B --> J[Payments & Official Receipts]
+        B --> K[Automated Reminders: Asia/Kolkata]
     end
 
-    subgraph User Experience Layer (Streamlit & Folium)
-        ML --> UI[Streamlit Command Center]
-        DA --> UI
-        ER --> UI
-        SQL --> UI
-        UI --> V1[Interactive Folium Maps with Heatmaps & Buffers]
-        UI --> V2[What-If AI Scenario Simulator]
-        UI --> V3[Emergency Facility Router & Logistics Calculator]
-        UI --> V4[Automated SITREP Disaster Situation Exporter]
+    subgraph Invariants["Architectural Invariants & Safeguards"]
+        H -.->|Rule: Never alters existing rents| I
+        I -.->|Auto-allocates / Overbooking Guard| G
+        J -.->|Advances Due Date +1 Month| I
+        J -.->|Auto-stops reminders| K
     end
 ```
 
 ---
 
-## 🌟 Key Features
+## 🚀 Key Modules & Features
 
-### 1. 🛰️ Real-Time Disaster Monitoring & Alerts
-- Live API integration with **USGS Earthquakes** (M2.5+ worldwide events with depth and tsunami flags) and **NASA EONET** (active wildfires, cyclones, and floods).
-- Resilient fallback telemetry stream ensuring 100% operational uptime if public APIs are unreachable or offline.
-- Real-time alert feed featuring high-priority warning banners and urgency categorization.
+### 1. Hostel Property Management
+- Manage multiple hostels under one account (e.g. *Sai PG* in Madhapur, *Lakshmi PG* in Hitec City, *Sri Sai Boys Hostel* in Ameerpet).
+- Full address info: Area, City, State, PIN code, contact number, and total floors.
+- **Clickable Google Maps link**: opens exact hostel address in Google Maps.
+- Safe delete protection: blocks deletion if active residents reside.
 
-### 2. 🗺️ Interactive Geographical Disaster Mapping
-- Built with **Folium** and **streamlit-folium**.
-- Multi-layer support: OpenStreetMap, Clustered Markers (`MarkerCluster`), and **Disaster Intensity Heatmaps** (`folium.plugins.HeatMap`).
-- Dynamic concentric **impact buffer circles** reflecting event blast/flooding radii.
-- Interactive emergency facility overlay displaying hospitals, relief camps, and rescue shelters with live capacity status.
+### 2. Floor & Room Management
+- 11 Standard Floors (Ground Floor through 10th Floor) + custom floors (e.g. Penthouse).
+- Exact room card format:
+  ```text
+  Room Number: 205
+  Floor: 2nd Floor
+  Sharing: 3 Sharing
+  Monthly Rent: ₹6,000 per person
+  Washroom: Attached
+  AC: Non-AC
+  Occupied Beds: 2
+  Available Beds: 1
+  ```
+- Washroom facilities: Attached Washroom (Yes/No), Common Washroom (Yes/No).
+- Visual bed slot indicators with occupant names.
 
-### 3. 🤖 AI-Based Disaster Risk Prediction
-- Multi-factor Machine Learning model predicting:
-  1. **Disaster Risk Score** ($0 - 100$)
-  2. **Vulnerability Classification** (*Low*, *Moderate*, *High*, *Critical*)
-  3. **Estimated Impact Footprint Radius** (km)
-- **Interactive "What-If" Scenario Simulator**: Sliders to adjust rainfall (mm), wind speed (km/h), temperature (°C), seismic PGA, soil moisture, and slope angle.
-- **Model Explainability**: Plotly feature importance charts exposing the top environmental drivers behind the prediction.
-- **Resilient AI Architecture**: Features a pure-NumPy L2-regularized engine that runs seamlessly across restricted enterprise/AppLocker environments without binary DLL blocks.
+### 3. Sharing-Wise Pricing
+- Pricing configuration per sharing tier:
+  - Single Sharing: ₹10,000 / month
+  - 2 Sharing: ₹7,000 / person / month
+  - 3 Sharing: ₹6,000 / person / month
+  - 4 Sharing: ₹5,000 / person / month
+  - 5 Sharing: ₹4,500 / person / month
+- **Agreed Rent Invariant**: Updating room prices **never** mutates existing students' agreed monthly rent.
 
-### 4. 💥 Damage Assessment & Affected-Area Analysis
-- Quantifies human impact: total exposed population, displaced residents, casualties, and injuries.
-- Evaluates physical infrastructure destruction: damaged homes and critical facilities.
-- Calculates agricultural devastation: submerged or parched cropland (in hectares) and total estimated economic loss (in Millions USD and ₹ Crores).
-- Automatic emergency tier grading: Tier-1 (National), Tier-2 (State), Tier-3 (District), Tier-4 (Local).
+### 4. Student Management & Check-in
+- Student ID codes: `STU-2026-XXX`.
+- Contact information, admission dates, agreed rent, and emergency contacts.
+- Strict overbooking guard: prevents duplicate bed allocations.
+- Vacating student instantly releases their bed slot back to "Available".
 
-### 5. 🏥 Emergency Assistance & Nearest Center Routing
-- **Haversine Distance Calculator**: Computes exact geodesic distance and estimated emergency transit time from any disaster incident to surrounding medical and relief centers.
-- **Emergency Facility Directory**: Tracks total capacity, occupied beds, ambulance units, and emergency contact numbers.
-- **SPHERE Relief Calculator**: Estimates required drinking water (liters), food rations (kg), medical kits, shelter tents, and emergency responders based on displaced population figures.
+### 5. Automated Rent Expiry Reminders
+- Daily background scheduler in `Asia/Kolkata` timezone (09:00 AM IST).
+- Two automatic notices:
+  1. **1 Day Before Due Date (24-hour notice)**
+  2. **On Expiry / Due Date (Due day notice)**
+- Duplicate prevention: logs ensure no repeated reminders on the same day.
+- Auto-stops reminders once payment is recorded.
+- Manual 1-click WhatsApp web direct link (`https://wa.me/...`).
 
-### 6. 📊 SQL Analytics & Database Engine
-- Backed by an optimized **SQLite** database (`data/disaster_database.db`).
-- Complex SQL analytics using **Window Functions** (`RANK() OVER`, `DENSE_RANK() OVER`, `ROW_NUMBER() OVER`, `PARTITION BY`).
-- In-app **Interactive SQL Query Runner**: Allows users and disaster analysts to compose, edit, and execute live SQL queries.
+### 6. Payments & Official Receipts
+- Track Expected Revenue, Collected Revenue, and Pending Revenue.
+- Full and partial payment recording via UPI, Cash, Bank Transfer, or Card.
+- Auto-advances student's next payment due date by +1 month upon full payment.
+- Official printable payment receipts (`RCP-2026-XXX`) with print-optimized CSS.
+- 1-click CSV payment data export.
 
-### 7. 📋 Situation Report (SITREP) Exporter
-- Generates formal disaster situation reports meeting NDMA, FEMA, and Red Cross formatting standards.
-- One-click export to printable text format and downloadable CSV data.
+### 7. Executive Dashboard & Student Portal
+- Real-time KPI summary cards and 4 interactive SVG charts.
+- Dedicated Student Resident Portal with personal room, bed, rent, and payment receipt history.
 
 ---
 
-## 🗄️ Database Architecture
+## 🛠️ Project Structure
 
-The SQLite database schema encompasses four primary tables:
-
-| Table | Description |
-| :--- | :--- |
-| `disaster_events` | Historical and real-time disaster incidents (coordinates, type, severity score, impact radius, status). |
-| `emergency_facilities` | Hospitals, trauma centers, relief shelters, and disaster response stations with capacities. |
-| `regional_vulnerability` | District demographics, population density, social vulnerability indices (SVI), and resilience scores. |
-| `damage_records` | Multi-sector damages, human casualties, displaced citizens, crop losses, and financial costs. |
+```text
+├── index.html                   # Application HTML entry point
+├── server.js                    # Node.js HTTP server & Asia/Kolkata reminder scheduler
+├── package.json                 # Project dependencies and test scripts
+├── .env.example                 # Safe environment variables template
+├── .gitignore                   # Git exclusion rules
+├── css/
+│   └── style.css                # Professional SaaS blue-and-white theme & print rules
+├── js/
+│   ├── db.js                    # Core enterprise DatabaseService & business logic
+│   └── app.js                   # Application UI Controller, views, and modal handlers
+├── supabase/
+│   └── migrations/
+│       ├── 001_initial_schema.sql       # Baseline schema
+│       ├── 002_add_hostel_details.sql   # Extended location fields
+│       └── 003_full_saas_schema.sql     # Full 10-table PostgreSQL SaaS schema
+├── tests/
+│   ├── test_hostel_manager.js   # Unit & regression tests (8/8 passing)
+│   └── test_saas_full.js        # Comprehensive SaaS acceptance suite (16/16 passing)
+└── website/                     # Synchronized static production bundle
+```
 
 ---
 
-## 🚀 Installation & Setup
+## ⚙️ Installation & Local Setup
 
 ### Prerequisites
-- Python 3.10+ (Tested and verified on Python 3.14)
-- Git
+- [Node.js](https://nodejs.org/) v18+ (tested on Node.js v24)
+- A modern web browser (Chrome, Edge, Firefox, Safari)
 
-### 1. Clone the Repository
+### Quick Start
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/<your-username>/narasimha-pg-hostel-manager.git
+   cd narasimha-pg-hostel-manager
+   ```
+
+2. Copy the environment configuration template:
+   ```bash
+   cp .env.example .env
+   ```
+
+3. Start the application:
+   ```bash
+   npm start
+   ```
+
+4. Open your browser and navigate to:
+   ```text
+   http://localhost:3000
+   ```
+
+### Demo Accounts
+- **Hostel Owner**: `owner1@hostel.com` / `password123` (*Narasimha Rao*)
+- **Student 1 (Due Tomorrow)**: `ravi@gmail.com` / `student123` (*Ravi Kumar*)
+- **Student 2 (Due Today)**: `suresh@gmail.com` / `student123` (*Suresh Varma*)
+
+*(Or use the 1-click Quick Login buttons on the sign-in screen)*
+
+---
+
+## 🧪 Testing
+
+Run the full automated test suite verifying all 16 major SaaS modules:
+
 ```bash
-git clone https://github.com/vikaskuram3/cafe-location-intelligence.git
-cd project
+npm test
 ```
 
-### 2. Install Dependencies
-```bash
-python -m pip install -r requirements.txt
+### Test Results
+```text
+================================================================
+ALL 16 SAAS ACCEPTANCE TESTS COMPLETED SUCCESSFULLY! (16/16)
+================================================================
+[PASS] Test 1/16: Multi-Role Authentication & Access Isolation
+[PASS] Test 2/16: Hostel Management CRUD, Addresses & Google Maps Links
+[PASS] Test 3/16: Delete Hostel Safety Confirmation (Blocks deletion when active students reside)
+[PASS] Test 4/16: Floor Management: 11 Standard Floors & Custom Floors
+[PASS] Test 5/16: Sharing-Wise Pricing Configuration per Hostel
+[PASS] Test 6/16: CRITICAL INVARIANT: Updating Room Prices Does NOT Alter Existing Students Agreed Rent
+[PASS] Test 7/16: Room Details & Exact Formatting (Room 205 in Sri Sai Boys Hostel)
+[PASS] Test 8/16: Room Capacity Validation & Bed Reduction Safety Guard
+[PASS] Test 9/16: Student Admission, Bed Assignment & Duplicate Bed Prevention
+[PASS] Test 10/16: Student Vacating Automatically Releases Bed Slot
+[PASS] Test 11/16: Automated Rent Expiry Reminders in Asia/Kolkata Timezone
+[PASS] Test 12/16: Duplicate Reminder Prevention (No repeat notifications on same day)
+[PASS] Test 13/16: Payment Recording Advances Due Date by +1 Month and Stops Reminders
+[PASS] Test 14/16: Partial Payment Tracking & Remaining Pending Balance
+[PASS] Test 15/16: Executive Dashboard KPI Calculations & Real-time Aggregation
+[PASS] Test 16/16: Database State Persistence Across Browser Refresh / Re-instantiation
 ```
 
 ---
 
-## 💻 Running the Application
+## 🔒 Security & Privacy
 
-Launch the Streamlit web dashboard:
-```powershell
-python -m streamlit run app.py
-```
-Open your browser at `http://localhost:8501`.
-
----
-
-## 🧪 Running Automated Tests
-
-Run the full pytest suite to verify database queries, API fallbacks, ML models, routing algorithms, and visualizations:
-```powershell
-python -m pytest tests/test_disaster_mapper.py -v
-```
-
-All 8 unit and integration tests pass cleanly with 100% test coverage.
-
----
-
-## 📂 Project Structure
-
-```
-project/
-├── app.py                          # Streamlit Master Dashboard Application
-├── config.py                       # Project configurations, color maps, API endpoints
-├── requirements.txt                # Python package dependencies
-├── README.md                       # Complete platform documentation
-├── data/
-│   ├── disaster_database.db        # SQLite database (events, facilities, damages, vulnerability)
-│   ├── raw/                        # Raw incoming telemetry caches
-│   └── processed/                  # Normalized datasets
-├── sql/
-│   ├── schema.sql                  # Database DDL schema with indexes
-│   └── analytics.sql               # Curated analytical SQL queries (window functions, rankings)
-├── src/
-│   ├── __init__.py
-│   ├── api_client.py               # USGS, NASA EONET, and Open-Meteo real-time client & fallback
-│   ├── database.py                 # SQLite database connection, seeding, and query wrappers
-│   ├── data_processor.py           # Coordinate validation, cleaning, and ML training dataset builder
-│   ├── ml_risk_model.py            # AI Risk Predictor (Scikit-Learn & AppLocker-immune Pure-NumPy engine)
-│   ├── damage_assessment.py        # Damage assessment, crop losses, and economic impact engine
-│   ├── emergency_routing.py        # Haversine distance, nearest facility locator & SPHERE supply calculator
-│   └── visualizations.py           # Folium map builder (heatmaps, clusters, buffers) & Plotly charts
-└── tests/
-    └── test_disaster_mapper.py     # Automated test suite
-```
+- No API keys, secret credentials, or database passwords are hardcoded in source code.
+- `.gitignore` strictly ignores local databases, environment secrets, and temporary files.
+- Role-based security guarantees that hostel owners cannot access other owners' data, and student residents can only inspect their personal room and payment records.
 
 ---
 
 ## 📄 License
-This project is open-source and distributed under the [MIT License](LICENSE).
+
+This project is licensed under the [MIT License](LICENSE).
