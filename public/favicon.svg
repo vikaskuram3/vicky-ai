@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="vGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <filter id="bloom">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Outer Dark Squircle -->
+  <rect x="4" y="4" width="120" height="120" rx="32" fill="#090d16" stroke="#1e293b" stroke-width="2.5" />
+  <circle cx="64" cy="64" r="48" fill="url(#glowGrad)" />
+
+  <!-- Iconic V Dynamic Wings -->
+  <path d="M34 36 L64 92 L94 36 L80 36 L64 68 L48 36 Z" fill="url(#vGrad)" filter="url(#bloom)" />
+  
+  <!-- Generative Sparkle Star -->
+  <path d="M64 22 L66 30 L74 32 L66 34 L64 42 L62 34 L54 32 L62 30 Z" fill="#38bdf8" />
+</svg>

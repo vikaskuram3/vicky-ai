@@ -1,0 +1,461 @@
+[
+  {
+    "id": "proj_movie_1795338649834",
+    "user_id": "usr_vicky_creator",
+    "is_private": true,
+    "title": "Movie: Cyberpunk journey into the neo...",
+    "prompt": "Cyberpunk journey into the neon nexus",
+    "type": "movie",
+    "model": "one-prompt-movie-maker",
+    "aspect_ratio": "16:9",
+    "duration": 3.5,
+    "fps": 12,
+    "video_url": "/outputs/vicky_movie_1795338648225.mp4",
+    "thumbnail_url": "/outputs/vicky_movie_1795338648225_thumb.jpg",
+    "created_at": "2026-11-22T09:10:49.834Z",
+    "tags": [
+      "Movie",
+      "2 Scenes",
+      "16:9",
+      "VICKY AI"
+    ]
+  },
+  {
+    "id": "proj_movie_1795338605087",
+    "user_id": "usr_vicky_creator",
+    "is_private": true,
+    "title": "Movie: Cyberpunk journey into the neo...",
+    "prompt": "Cyberpunk journey into the neon nexus",
+    "type": "movie",
+    "model": "one-prompt-movie-maker",
+    "aspect_ratio": "16:9",
+    "duration": 3.5,
+    "fps": 12,
+    "video_url": "/outputs/vicky_movie_1795338603613.mp4",
+    "thumbnail_url": "/outputs/vicky_movie_1795338603613_thumb.jpg",
+    "created_at": "2026-11-22T09:10:05.087Z",
+    "tags": [
+      "Movie",
+      "2 Scenes",
+      "16:9",
+      "VICKY AI"
+    ]
+  },
+  {
+    "id": "proj_movie_1795338296569",
+    "user_id": "usr_vicky_creator",
+    "is_private": true,
+    "title": "Movie: Cyberpunk journey into the neo...",
+    "prompt": "Cyberpunk journey into the neon nexus",
+    "type": "movie",
+    "model": "one-prompt-movie-maker",
+    "aspect_ratio": "16:9",
+    "duration": 3.5,
+    "fps": 12,
+    "video_url": "/outputs/vicky_movie_1795338294964.mp4",
+    "thumbnail_url": "/outputs/vicky_movie_1795338294964_thumb.jpg",
+    "created_at": "2026-11-22T09:04:56.569Z",
+    "tags": [
+      "Movie",
+      "2 Scenes",
+      "16:9",
+      "VICKY AI"
+    ]
+  },
+  {
+    "id": "proj_movie_1795338027947",
+    "user_id": "usr_vicky_creator",
+    "is_private": true,
+    "title": "Movie: Cyberpunk journey into the neo...",
+    "prompt": "Cyberpunk journey into the neon nexus",
+    "type": "movie",
+    "model": "one-prompt-movie-maker",
+    "aspect_ratio": "16:9",
+    "duration": 3.5,
+    "fps": 12,
+    "video_url": "/outputs/vicky_movie_1795338026179.mp4",
+    "thumbnail_url": "/outputs/vicky_movie_1795338026179_thumb.jpg",
+    "created_at": "2026-11-22T09:00:27.947Z",
+    "tags": [
+      "Movie",
+      "2 Scenes",
+      "16:9",
+      "VICKY AI"
+    ]
+  },
+  {
+    "id": "proj_movie_1795337932585",
+    "user_id": "usr_vicky_creator",
+    "is_private": true,
+    "title": "Movie: Cyberpunk journey into the neo...",
+    "prompt": "Cyberpunk journey into the neon nexus",
+    "type": "movie",
+    "model": "one-prompt-movie-maker",
+    "aspect_ratio": "16:9",
+    "duration": 3.5,
+    "fps": 12,
+    "video_url": "/outputs/vicky_movie_1795337930971.mp4",
+    "thumbnail_url": "/outputs/vicky_movie_1795337930971_thumb.jpg",
+    "created_at": "2026-11-22T08:58:52.585Z",
+    "tags": [
+      "Movie",
+      "2 Scenes",
+      "16:9",
+      "VICKY AI"
+    ]
+  },
+  {
+    "id": "proj_movie_1795286124069",
+    "user_id": "usr_vicky_creator",
+    "is_private": true,
+    "title": "Movie: Cyberpunk journey into the neo...",
+    "prompt": "Cyberpunk journey into the neon nexus",
+    "type": "movie",
+    "model": "one-prompt-movie-maker",
+    "aspect_ratio": "16:9",
+    "duration": 3.5,
+    "fps": 12,
+    "video_url": "/outputs/vicky_movie_1795286122511.mp4",
+    "thumbnail_url": "/outputs/vicky_movie_1795286122511_thumb.jpg",
+    "created_at": "2026-11-21T18:35:24.069Z",
+    "tags": [
+      "Movie",
+      "2 Scenes",
+      "16:9",
+      "VICKY AI"
+    ]
+  },
+  {
+    "id": "proj_movie_1795286092710",
+    "user_id": "usr_vicky_creator",
+    "is_private": true,
+    "title": "Movie: Cyberpunk journey into the neo...",
+    "prompt": "Cyberpunk journey into the neon nexus",
+    "type": "movie",
+    "model": "one-prompt-movie-maker",
+    "aspect_ratio": "16:9",
+    "duration": 3.5,
+    "fps": 12,
+    "video_url": "/outputs/vicky_movie_1795286090073.mp4",
+    "thumbnail_url": "/outputs/vicky_movie_1795286090073_thumb.jpg",
+    "created_at": "2026-11-21T18:34:52.710Z",
+    "tags": [
+      "Movie",
+      "2 Scenes",
+      "16:9",
+      "VICKY AI"
+    ]
+  },
+  {
+    "id": "proj_movie_1795285200022",
+    "user_id": "usr_vicky_creator",
+    "is_private": true,
+    "title": "Movie: Cyberpunk journey into the neo...",
+    "prompt": "Cyberpunk journey into the neon nexus",
+    "type": "movie",
+    "model": "one-prompt-movie-maker",
+    "aspect_ratio": "16:9",
+    "duration": 3.5,
+    "fps": 12,
+    "video_url": "/outputs/vicky_movie_1795285198452.mp4",
+    "thumbnail_url": "/outputs/vicky_movie_1795285198452_thumb.jpg",
+    "created_at": "2026-11-21T18:20:00.022Z",
+    "tags": [
+      "Movie",
+      "2 Scenes",
+      "16:9",
+      "VICKY AI"
+    ]
+  },
+  {
+    "id": "proj_movie_1795285181768",
+    "user_id": "usr_vicky_creator",
+    "is_private": true,
+    "title": "Movie: Cyberpunk journey into the neo...",
+    "prompt": "Cyberpunk journey into the neon nexus",
+    "type": "movie",
+    "model": "one-prompt-movie-maker",
+    "aspect_ratio": "16:9",
+    "duration": 3.5,
+    "fps": 12,
+    "video_url": "/outputs/vicky_movie_1795285180175.mp4",
+    "thumbnail_url": "/outputs/vicky_movie_1795285180175_thumb.jpg",
+    "created_at": "2026-11-21T18:19:41.768Z",
+    "tags": [
+      "Movie",
+      "2 Scenes",
+      "16:9",
+      "VICKY AI"
+    ]
+  },
+  {
+    "id": "proj_1795273029883",
+    "user_id": "usr_vicky_creator",
+    "is_private": true,
+    "title": "Futuristic bioluminescent cyber-sta...",
+    "prompt": "Futuristic bioluminescent cyber-station with neon reflections and volumetric light rays",
+    "type": "text-to-video",
+    "model": "ffmpeg-procedural",
+    "aspect_ratio": "16:9",
+    "duration": 3,
+    "fps": 16,
+    "video_url": "/outputs/vicky_t2v_1795273026759.mp4",
+    "thumbnail_url": "/outputs/vicky_t2v_1795273026759_thumb.jpg",
+    "created_at": "2026-11-21T14:57:09.883Z",
+    "tags": [
+      "ffmpeg-procedural",
+      "16:9",
+      "3s",
+      "H.264 MP4"
+    ]
+  },
+  {
+    "id": "proj_1795271138647",
+    "user_id": "usr_vicky_creator",
+    "is_private": true,
+    "title": "Futuristic bioluminescent cyber-sta...",
+    "prompt": "Futuristic bioluminescent cyber-station with neon reflections and volumetric light rays",
+    "type": "text-to-video",
+    "model": "ffmpeg-procedural",
+    "aspect_ratio": "16:9",
+    "duration": 3,
+    "fps": 16,
+    "video_url": "/outputs/vicky_t2v_1795271137114.mp4",
+    "thumbnail_url": "/outputs/vicky_t2v_1795271137114_thumb.jpg",
+    "created_at": "2026-11-21T14:25:38.647Z",
+    "tags": [
+      "ffmpeg-procedural",
+      "16:9",
+      "3s",
+      "H.264 MP4"
+    ]
+  },
+  {
+    "id": "proj_1795270863496",
+    "user_id": "usr_vicky_creator",
+    "is_private": true,
+    "title": "Futuristic bioluminescent cyber-sta...",
+    "prompt": "Futuristic bioluminescent cyber-station with neon reflections and volumetric light rays",
+    "type": "text-to-video",
+    "model": "ffmpeg-procedural",
+    "aspect_ratio": "16:9",
+    "duration": 3,
+    "fps": 16,
+    "video_url": "/outputs/vicky_t2v_1795270861908.mp4",
+    "thumbnail_url": "/outputs/vicky_t2v_1795270861908_thumb.jpg",
+    "created_at": "2026-11-21T14:21:03.496Z",
+    "tags": [
+      "ffmpeg-procedural",
+      "16:9",
+      "3s",
+      "H.264 MP4"
+    ]
+  },
+  {
+    "id": "proj_1795270786667",
+    "user_id": "usr_vicky_creator",
+    "is_private": true,
+    "title": "Futuristic bioluminescent cyber-sta...",
+    "prompt": "Futuristic bioluminescent cyber-station with neon reflections and volumetric light rays",
+    "type": "text-to-video",
+    "model": "ffmpeg-procedural",
+    "aspect_ratio": "16:9",
+    "duration": 3,
+    "fps": 16,
+    "video_url": "/outputs/vicky_t2v_1795270785017.mp4",
+    "thumbnail_url": "/outputs/vicky_t2v_1795270785017_thumb.jpg",
+    "created_at": "2026-11-21T14:19:46.667Z",
+    "tags": [
+      "ffmpeg-procedural",
+      "16:9",
+      "3s",
+      "H.264 MP4"
+    ]
+  },
+  {
+    "id": "proj_1795270744113",
+    "user_id": "usr_vicky_creator",
+    "is_private": true,
+    "title": "Futuristic bioluminescent cyber-sta...",
+    "prompt": "Futuristic bioluminescent cyber-station with neon reflections and volumetric light rays",
+    "type": "text-to-video",
+    "model": "ffmpeg-procedural",
+    "aspect_ratio": "16:9",
+    "duration": 3,
+    "fps": 16,
+    "video_url": "/outputs/vicky_t2v_1795270742568.mp4",
+    "thumbnail_url": "/outputs/vicky_t2v_1795270742568_thumb.jpg",
+    "created_at": "2026-11-21T14:19:04.113Z",
+    "tags": [
+      "ffmpeg-procedural",
+      "16:9",
+      "3s",
+      "H.264 MP4"
+    ]
+  },
+  {
+    "id": "proj_1795270725416",
+    "user_id": "usr_vicky_creator",
+    "is_private": true,
+    "title": "Futuristic bioluminescent cyber-sta...",
+    "prompt": "Futuristic bioluminescent cyber-station with neon reflections and volumetric light rays",
+    "type": "text-to-video",
+    "model": "ffmpeg-procedural",
+    "aspect_ratio": "16:9",
+    "duration": 3,
+    "fps": 16,
+    "video_url": "/outputs/vicky_t2v_1795270723788.mp4",
+    "thumbnail_url": "/outputs/vicky_t2v_1795270723788_thumb.jpg",
+    "created_at": "2026-11-21T14:18:45.416Z",
+    "tags": [
+      "ffmpeg-procedural",
+      "16:9",
+      "3s",
+      "H.264 MP4"
+    ]
+  },
+  {
+    "id": "proj_1795238921967",
+    "title": "Act as a world-class Hollywood film...",
+    "prompt": "Act as a world-class Hollywood filmmaker, professional gaming documentary director, Telugu scriptwriter and video editor.\n\nCreate ONE complete 3-minute (180-second) cinematic YouTube documentary about GRAND THEFT AUTO VI (GTA 6).\n\nVIDEO TITLE:\nGTA 6 🔥 Complete Explanation in Telugu | Jason & Lucia | Vice City | Full Details\n\nVIDEO SETTINGS:\n- Duration: Exactly 180 seconds.\n- Landscape 16:9.\n- 4K or 1080p.\n- Professional cinematic documentary quality.\n- Natural Telugu male narration mixed with English gaming terminology.\n- Deep, powerful, energetic mass-hero delivery inspired by blockbuster Telugu cinema, but do NOT imitate or clone any real actor\\'s voice.\n- Add accurate Telugu subtitles synchronized with narration.\n\nSCENE 1 — INTRO (0:00–0:20)\nOpen with an explosive cinematic introduction. Show the GTA VI title, neon-lit Vice City, luxury supercars, beaches, helicopters and dramatic action.\nStart narration with:\n\"గేమింగ్ ప్రపంచంలో మరో కొత్త సంచలనం! ఎన్నో సంవత్సరాల ఎదురుచూపుల తర్వాత GTA 6 వచ్చేసింది! అసలు ఈ గేమ్‌లో ఏముంది? తెలుసుకుందాం!\"\n\nSCENE 2 — GTA 6 EXPLANATION (0:20–0:45)\nExplain Rockstar Games, the Grand Theft Auto series and the open-world gaming experience. Show cinematic city exploration and gameplay-style visuals.\n\nSCENE 3 — JASON AND LUCIA (0:45–1:10)\nIntroduce Jason and Lucia. Explain their partnership, relationship and criminal adventures. Show character-focused cinematic sequences.\n\nSCENE 4 — VICE CITY AND LEONIDA (1:10–1:35)\nShow beautiful beaches, skyscrapers, highways, nightlife, countryside and city environments. Explain the fictional state of Leonida and Vice City.\n\nSCENE 5 — GAMEPLAY AND FEATURES (1:35–2:10)\nShow driving, luxury vehicles, racing, police chases, missions, exploration, combat and character interactions. Explain the variety of activities players can experience.\n\nSCENE 6 — GRAPHICS AND REALISM (2:10–2:35)\nShow realistic character details, lighting, reflections, weather, water, vehicles, animations and environmental details. Explain the visual improvements.\n\nSCENE 7 — RELEASE AND PLATFORMS (2:35–2:48)\nGive verified information:\nGTA VI officially released on November 19, 2026.\nSupported platforms: PlayStation 5 and Xbox Series X|S.\nDo not invent a PC release date.\n\nSCENE 8 — POWERFUL ENDING (2:48–3:00)\nShow Jason and Lucia with a spectacular Vice City night background. Finish with a dramatic GTA VI title reveal.\n\nENDING NARRATION:\n\"మరి మీకు GTA 6 లో ఏ feature ఎక్కువగా నచ్చింది? కామెంట్ చేయండి! వీడియో నచ్చితే Like చేయండి, మీ ఫ్రెండ్స్‌తో Share చేయండి. మరిన్ని gaming videos కోసం Subscribe చేయండి!\"\n\nVISUAL AND EDITING REQUIREMENTS:\n- Cinematic camera movements and smooth transitions.\n- Dramatic background music.\n- Car engine sounds, police sirens and action sound effects.\n- Accurate Telugu subtitles.\n- No repetitive shots.\n- Synchronize visuals with narration.\n- Use official Rockstar GTA VI footage and properly licensed assets wherever possible.\n- Never present AI-generated fictional scenes as actual GTA VI gameplay.\n- Do not invent gameplay features or story details.\n- Maintain consistent character appearances for Jason and Lucia.\n\nTHUMBNAIL:\nCreate an attractive YouTube thumbnail featuring Jason and Lucia with Vice City in the background.\nAdd bold text:\n\"GTA 6 🔥\"\n\"3 నిమిషాల్లో పూర్తి వివరాలు!\"\n\nFINAL OUTPUT:\nCreate one complete, professionally edited 180-second MP4 video with Telugu narration, cinematic visuals, subtitles, background music and sound effects. Make the opening five seconds extremely engaging and maintain viewer interest until the end.",
+    "type": "text-to-video",
+    "model": "wan-2.1",
+    "aspect_ratio": "16:9",
+    "duration": 3,
+    "fps": 24,
+    "video_url": "/outputs/vicky_t2v_1795238916265.mp4",
+    "thumbnail_url": "/outputs/vicky_t2v_1795238916265_thumb.jpg",
+    "created_at": "2026-11-21T05:28:41.968Z",
+    "tags": [
+      "wan-2.1",
+      "16:9",
+      "3s"
+    ]
+  },
+  {
+    "id": "proj_1795238860033",
+    "title": "Act as a world-class Hollywood film...",
+    "prompt": "Act as a world-class Hollywood filmmaker, professional gaming documentary director, Telugu scriptwriter and video editor.\n\nCreate ONE complete 3-minute (180-second) cinematic YouTube documentary about GRAND THEFT AUTO VI (GTA 6).\n\nVIDEO TITLE:\nGTA 6 🔥 Complete Explanation in Telugu | Jason & Lucia | Vice City | Full Details\n\nVIDEO SETTINGS:\n- Duration: Exactly 180 seconds.\n- Landscape 16:9.\n- 4K or 1080p.\n- Professional cinematic documentary quality.\n- Natural Telugu male narration mixed with English gaming terminology.\n- Deep, powerful, energetic mass-hero delivery inspired by blockbuster Telugu cinema, but do NOT imitate or clone any real actor\\'s voice.\n- Add accurate Telugu subtitles synchronized with narration.\n\nSCENE 1 — INTRO (0:00–0:20)\nOpen with an explosive cinematic introduction. Show the GTA VI title, neon-lit Vice City, luxury supercars, beaches, helicopters and dramatic action.\nStart narration with:\n\"గేమింగ్ ప్రపంచంలో మరో కొత్త సంచలనం! ఎన్నో సంవత్సరాల ఎదురుచూపుల తర్వాత GTA 6 వచ్చేసింది! అసలు ఈ గేమ్‌లో ఏముంది? తెలుసుకుందాం!\"\n\nSCENE 2 — GTA 6 EXPLANATION (0:20–0:45)\nExplain Rockstar Games, the Grand Theft Auto series and the open-world gaming experience. Show cinematic city exploration and gameplay-style visuals.\n\nSCENE 3 — JASON AND LUCIA (0:45–1:10)\nIntroduce Jason and Lucia. Explain their partnership, relationship and criminal adventures. Show character-focused cinematic sequences.\n\nSCENE 4 — VICE CITY AND LEONIDA (1:10–1:35)\nShow beautiful beaches, skyscrapers, highways, nightlife, countryside and city environments. Explain the fictional state of Leonida and Vice City.\n\nSCENE 5 — GAMEPLAY AND FEATURES (1:35–2:10)\nShow driving, luxury vehicles, racing, police chases, missions, exploration, combat and character interactions. Explain the variety of activities players can experience.\n\nSCENE 6 — GRAPHICS AND REALISM (2:10–2:35)\nShow realistic character details, lighting, reflections, weather, water, vehicles, animations and environmental details. Explain the visual improvements.\n\nSCENE 7 — RELEASE AND PLATFORMS (2:35–2:48)\nGive verified information:\nGTA VI officially released on November 19, 2026.\nSupported platforms: PlayStation 5 and Xbox Series X|S.\nDo not invent a PC release date.\n\nSCENE 8 — POWERFUL ENDING (2:48–3:00)\nShow Jason and Lucia with a spectacular Vice City night background. Finish with a dramatic GTA VI title reveal.\n\nENDING NARRATION:\n\"మరి మీకు GTA 6 లో ఏ feature ఎక్కువగా నచ్చింది? కామెంట్ చేయండి! వీడియో నచ్చితే Like చేయండి, మీ ఫ్రెండ్స్‌తో Share చేయండి. మరిన్ని gaming videos కోసం Subscribe చేయండి!\"\n\nVISUAL AND EDITING REQUIREMENTS:\n- Cinematic camera movements and smooth transitions.\n- Dramatic background music.\n- Car engine sounds, police sirens and action sound effects.\n- Accurate Telugu subtitles.\n- No repetitive shots.\n- Synchronize visuals with narration.\n- Use official Rockstar GTA VI footage and properly licensed assets wherever possible.\n- Never present AI-generated fictional scenes as actual GTA VI gameplay.\n- Do not invent gameplay features or story details.\n- Maintain consistent character appearances for Jason and Lucia.\n\nTHUMBNAIL:\nCreate an attractive YouTube thumbnail featuring Jason and Lucia with Vice City in the background.\nAdd bold text:\n\"GTA 6 🔥\"\n\"3 నిమిషాల్లో పూర్తి వివరాలు!\"\n\nFINAL OUTPUT:\nCreate one complete, professionally edited 180-second MP4 video with Telugu narration, cinematic visuals, subtitles, background music and sound effects. Make the opening five seconds extremely engaging and maintain viewer interest until the end.",
+    "type": "text-to-video",
+    "model": "wan-2.1",
+    "aspect_ratio": "16:9",
+    "duration": 3,
+    "fps": 24,
+    "video_url": "/outputs/vicky_t2v_1795238854094.mp4",
+    "thumbnail_url": "/outputs/vicky_t2v_1795238854094_thumb.jpg",
+    "created_at": "2026-11-21T05:27:40.036Z",
+    "tags": [
+      "wan-2.1",
+      "16:9",
+      "3s"
+    ]
+  },
+  {
+    "id": "proj_1795238837396",
+    "title": "Cinematic 35mm film shot of deep se...",
+    "prompt": "Cinematic 35mm film shot of deep sea bioluminescent jellyfish pulsating with azure blue and magenta light, underwater bubbles, photorealistic 8k",
+    "type": "text-to-video",
+    "model": "wan-2.1",
+    "aspect_ratio": "16:9",
+    "duration": 3,
+    "fps": 24,
+    "video_url": "/outputs/vicky_t2v_1795238830072.mp4",
+    "thumbnail_url": "/outputs/vicky_t2v_1795238830072_thumb.jpg",
+    "created_at": "2026-11-21T05:27:17.396Z",
+    "tags": [
+      "wan-2.1",
+      "16:9",
+      "3s"
+    ]
+  },
+  {
+    "id": "proj_1795238747189",
+    "title": "Cinematic 35mm film shot of deep se...",
+    "prompt": "Cinematic 35mm film shot of deep sea bioluminescent jellyfish pulsating with azure blue and magenta light, underwater bubbles, photorealistic 8k",
+    "type": "text-to-video",
+    "model": "wan-2.1",
+    "aspect_ratio": "16:9",
+    "duration": 3,
+    "fps": 24,
+    "video_url": "/outputs/vicky_t2v_1795238739137.mp4",
+    "thumbnail_url": "/outputs/vicky_t2v_1795238739137_thumb.jpg",
+    "created_at": "2026-11-21T05:25:47.189Z",
+    "tags": [
+      "wan-2.1",
+      "16:9",
+      "3s"
+    ]
+  },
+  {
+    "id": "proj_demo_001",
+    "title": "Cyberpunk Neon Metropolis",
+    "prompt": "Futuristic cyberpunk neon city with flying hover vehicles, raytraced reflections",
+    "type": "text-to-video",
+    "model": "wan-2.1",
+    "aspect_ratio": "16:9",
+    "duration": 2,
+    "fps": 12,
+    "video_url": "/samples/cyberpunk_city.mp4",
+    "thumbnail_url": "/samples/cyberpunk_city_thumb.jpg",
+    "created_at": "2026-11-21T10:00:00.000Z",
+    "tags": [
+      "Cyberpunk",
+      "Wan 2.1",
+      "16:9"
+    ]
+  },
+  {
+    "id": "proj_demo_002",
+    "title": "Cascading Rainforest Waterfall",
+    "prompt": "Lush tropical rainforest with cascading waterfall and golden sunlight beams",
+    "type": "text-to-video",
+    "model": "wan-2.1",
+    "aspect_ratio": "16:9",
+    "duration": 2,
+    "fps": 12,
+    "video_url": "/samples/nature_waterfall.mp4",
+    "thumbnail_url": "/samples/nature_waterfall_thumb.jpg",
+    "created_at": "2026-11-21T10:05:00.000Z",
+    "tags": [
+      "Nature",
+      "Cinematic",
+      "16:9"
+    ]
+  },
+  {
+    "id": "proj_demo_003",
+    "title": "Deep Cosmic Stardust",
+    "prompt": "Deep cosmic nebula with swirling purple stardust and glowing interstellar cluster",
+    "type": "text-to-video",
+    "model": "animatediff-xl",
+    "aspect_ratio": "9:16",
+    "duration": 2,
+    "fps": 12,
+    "video_url": "/samples/cosmic_nebula.mp4",
+    "thumbnail_url": "/samples/cosmic_nebula_thumb.jpg",
+    "created_at": "2026-11-21T10:10:00.000Z",
+    "tags": [
+      "Space",
+      "Shorts 9:16",
+      "AnimateDiff"
+    ]
+  },
+  {
+    "id": "proj_demo_004",
+    "title": "Cyborg Portrait Synth",
+    "prompt": "Futuristic humanoid android face with glowing fiber optic circuitry",
+    "type": "image-to-video",
+    "model": "svd-xt",
+    "aspect_ratio": "1:1",
+    "duration": 2,
+    "fps": 12,
+    "video_url": "/samples/ai_robot_portrait.mp4",
+    "thumbnail_url": "/samples/ai_robot_portrait_thumb.jpg",
+    "created_at": "2026-11-21T10:15:00.000Z",
+    "tags": [
+      "Portrait",
+      "Square 1:1",
+      "SVD"
+    ]
+  }
+]

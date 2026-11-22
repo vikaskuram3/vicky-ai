@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- VICKY AI Home Page -->
+  <url>
+    <loc>https://vickyai.com/</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- AI Video Generator Workspace -->
+  <url>
+    <loc>https://vickyai.com/generator</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Text to Video AI -->
+  <url>
+    <loc>https://vickyai.com/text-to-video</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Image to Video AI -->
+  <url>
+    <loc>https://vickyai.com/image-to-video</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- AI Script Generator -->
+  <url>
+    <loc>https://vickyai.com/script-generator</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- AI Voice Generator -->
+  <url>
+    <loc>https://vickyai.com/voice-generator</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Online Video Editor -->
+  <url>
+    <loc>https://vickyai.com/video-editor</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- My Projects Portfolio -->
+  <url>
+    <loc>https://vickyai.com/projects</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- About Us -->
+  <url>
+    <loc>https://vickyai.com/about</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- Contact Us -->
+  <url>
+    <loc>https://vickyai.com/contact</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <!-- User Login & Signup -->
+  <url>
+    <loc>https://vickyai.com/auth</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+
+</urlset>

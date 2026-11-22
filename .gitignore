@@ -1,43 +1,39 @@
 # Dependencies
 node_modules/
-.pnpm-store/
+package-lock.json
 
-# Local Environment Variables & Secrets (NEVER COMMIT)
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+env/
+venv/
+.venv/
+
+# Environment Variables & Secrets
 .env
 .env.local
-.env.*.local
-*.pem
-*.key
-*.cert
+.env.production
 
-# Local Database Stores & Persistent Data
-*.db
-*.sqlite
-*.sqlite3
-data/*.json
-data/saas_database.json
+# Data Outputs (keep folder structure)
+data/outputs/*.mp4
+data/outputs/*.wav
+data/outputs/*.srt
+data/outputs/*.vtt
+data/outputs/*.jpg
+data/outputs/*.png
+!data/outputs/.gitkeep
 
-# Temporary & Local Backups
-backup/
-*.bak
-*.tmp
+# Binaries & Shared Libraries
+bin/*.exe
+bin/*.dll
+!bin/.gitkeep
 
-# Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Archives
+archive_previous_project/
+*.zip
 
-# OS / Editor files
+# OS Files
 .DS_Store
 Thumbs.db
-.vscode/
-.idea/
-
-# Byte-compiled / Python cache
-__pycache__/
-*.py[cod]
-.pytest_cache/
-.venv/
-venv/

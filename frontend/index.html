@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ==========================================================================
+       VICKY AI - SEO META TAGS & GOOGLE SEARCH INTEGRATION
+       ========================================================================== -->
+  <title>VICKY AI - Free AI Video Generator | Text to Video & Image to Video</title>
+  <meta name="description" content="Create stunning AI videos with VICKY AI. Open-source text-to-video and image-to-video generator powered by Wan 2.1, Stable Video Diffusion, AnimateDiff, and FFmpeg. Create Anything. Generate Everything.">
+  <meta name="keywords" content="Vicky AI, Vicky AI Video Generator, Free AI Video Generator, Text to Video AI, Image to Video AI, Wan 2.1, Stable Video Diffusion, AnimateDiff, Open Source AI Video, AI Video Editor">
+  <meta name="author" content="VICKY AI Team">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://vickyai.com">
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vickyai.com">
+  <meta property="og:site_name" content="VICKY AI">
+  <meta property="og:title" content="VICKY AI - Free AI Video Generator | Text to Video & Image to Video">
+  <meta property="og:description" content="ONE PROMPT. ONE STORY. ONE COMPLETE MOVIE. State-of-the-art open-source text-to-video, One-Prompt Movie Maker, Character Memory, and Telugu AI Studio.">
+  <meta property="og:image" content="https://vickyai.com/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="VICKY AI - ONE PROMPT. ONE STORY. ONE COMPLETE MOVIE.">
+
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://vickyai.com">
+  <meta name="twitter:title" content="VICKY AI - Free AI Video Generator">
+  <meta name="twitter:description" content="ONE PROMPT. ONE STORY. ONE COMPLETE MOVIE. Free Text-to-Video & Movie Studio.">
+  <meta name="twitter:image" content="https://vickyai.com/og-image.png">
+
+  <!-- Google Search Console Verification Meta Tag -->
+  <meta name="google-site-verification" content="google-search-console-verification-token-placeholder">
+
+  <!-- Favicon & Brand Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/favicon.svg">
+  <meta name="theme-color" content="#030308">
+
+  <!-- Fonts & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Telugu:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Supabase JS CDN (Official SDK v2) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- ==========================================================================
+       SCHEMA.ORG STRUCTURED DATA (JSON-LD)
+       ========================================================================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "VICKY AI",
+        "url": "https://vickyai.com",
+        "operatingSystem": "Web, Windows, macOS, Linux, Android, iOS",
+        "applicationCategory": "MultimediaApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "VICKY AI is a next-generation open-source AI video-generation platform designed like Google AI Studio. Generate cinematic videos from text prompts and images using Wan 2.1, Stable Video Diffusion, AnimateDiff, and FFmpeg.",
+        "creator": {
+          "@type": "Organization",
+          "name": "VICKY AI"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://vickyai.com/#website",
+        "url": "https://vickyai.com",
+        "name": "VICKY AI Video Generator",
+        "description": "Create Anything. Generate Everything with Open-Source AI Video Foundation Models.",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://vickyai.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is VICKY AI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "VICKY AI is a professional AI video-generation platform working like Google AI Studio. It generates high-definition videos from text prompts and images using open-source models including Wan 2.1, Stable Video Diffusion, and AnimateDiff."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is VICKY AI free to use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes! VICKY AI is built on open-source foundation models and provides free video generation without requiring paid third-party API subscriptions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What video formats and aspect ratios are supported?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "VICKY AI supports 16:9 (Cinematic Landscape), 9:16 (YouTube Shorts, TikTok, Instagram Reels), and 1:1 (Square) with direct MP4 downloads."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       TOP NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="brand-wrapper">
+      <button class="btn-icon mobile-menu-toggle" id="btnToggleSidebar" aria-label="Toggle Navigation">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+      <a href="#home" class="brand-link" style="display:flex; align-items:center; gap:10px;">
+        <img src="/favicon.svg" alt="VICKY AI Logo" class="brand-logo-img">
+        <div style="display:flex; flex-direction:column;">
+          <span class="brand-text">VICKY AI <span class="brand-badge">STUDIO</span></span>
+          <span style="font-size:0.62rem; color:#94a3b8; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;">ONE PROMPT. ONE STORY. ONE COMPLETE MOVIE.</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Active Open-Source Model Indicator -->
+    <div class="header-center">
+      <div class="model-pill">
+        <span class="pulse-dot"></span>
+        <span id="activeModelLabel">Model: FFmpeg Kinematic Synthesizer (H.264 / AAC)</span>
+      </div>
+    </div>
+
+    <!-- Actions (Theme Toggle, Auth, Fast Start) -->
+    <div class="header-actions">
+      <button class="btn-icon" id="btnThemeToggle" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+        <svg id="themeIconDark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg id="themeIconLight" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+
+      <div id="authHeaderContainer">
+        <a href="/login" class="btn-outline" style="padding:4px 12px; font-size:0.8rem;">Sign In</a>
+        <a href="/signup" class="btn-cta" style="padding:4px 12px; font-size:0.8rem;">Sign Up</a>
+      </div>
+
+      <a href="#create-movie" class="btn-cta" style="background:linear-gradient(135deg, #a855f7 0%, #06b6d4 100%);">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <span>Make Movie</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       APP LAYOUT (SIDEBAR & MAIN CONTENT)
+       ========================================================================== -->
+  <div class="app-layout">
+    
+    <!-- LEFT SIDEBAR NAVIGATION: PART 6 DASHBOARD -->
+    <aside class="sidebar" id="appSidebar">
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Core Video Studio</div>
+        <a href="#create-video" class="nav-item" data-page="create-video">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/><line x1="19" y1="12" x2="23" y2="12"/><line x1="12" y1="5" x2="12" y2="1"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+          <span>Create Video</span>
+        </a>
+        <a href="#create-movie" class="nav-item active" data-page="create-movie">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+          <span>Create Movie <span style="font-size:0.6rem; color:#00f0ff; background:rgba(6,182,212,0.15); padding:1px 4px; border-radius:3px; margin-left:4px;">PRO</span></span>
+        </a>
+        <a href="#image-to-video" class="nav-item" data-page="image-to-video">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>Image to Video</span>
+        </a>
+        <a href="#story-to-video" class="nav-item" data-page="story-to-video">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          <span>Story to Video</span>
+        </a>
+
+        <div class="nav-section-title">Specialized Studios</div>
+        <a href="#telugu-studio" class="nav-item" data-page="telugu-studio">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          <span>Telugu AI Studio <span style="font-size:0.6rem; color:#fbbf24; background:rgba(251,191,36,0.15); padding:1px 4px; border-radius:3px; margin-left:4px;">తెలుగు</span></span>
+        </a>
+        <a href="#thumbnail-generator" class="nav-item" data-page="thumbnail-generator">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <span>Thumbnail Generator</span>
+        </a>
+        <a href="#video-editor" class="nav-item" data-page="video-editor">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>
+          <span>Auto Video Editor</span>
+        </a>
+
+        <div class="nav-section-title">Library & Exports</div>
+        <a href="#my-creations" class="nav-item" data-page="my-creations">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          <span>My Creations</span>
+        </a>
+        <a href="#downloads" class="nav-item" data-page="downloads">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Video Downloads</span>
+        </a>
+        <a href="#settings" class="nav-item" data-page="settings">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <span>Settings</span>
+        </a>
+
+        <div class="nav-section-title">Information</div>
+        <a href="#home" class="nav-item" data-page="home">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Home Overview</span>
+        </a>
+        <a href="#about" class="nav-item" data-page="about">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <span>About VICKY AI</span>
+        </a>
+        <a href="#contact" class="nav-item" data-page="contact">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>Contact & SEO</span>
+        </a>
+      </nav>
+
+      <!-- Sidebar Footer (User Account Widget) -->
+      <div class="sidebar-footer">
+        <div class="user-profile-badge" id="sidebarUserBadge" onclick="VickyApp.navigateTo('settings')">
+          <div class="user-avatar" id="sidebarAvatar">V</div>
+          <div class="user-info">
+            <div class="user-name" id="sidebarUserName">AI Creator</div>
+            <div class="user-credits" id="sidebarUserCredits">500 Credits Free</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ==========================================================================
+         MAIN CONTENT PAGES
+         ========================================================================== -->
+    <main class="main-content">
+
+      <!-- ====================================================================
+           PAGE 1: CREATE MOVIE (ONE-PROMPT MOVIE MAKER - Part 5A & 6)
+           ==================================================================== -->
+      <section id="page-create-movie" class="page-view active">
+        <div class="page-title-row" style="margin-bottom:20px;">
+          <div>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="pulse-dot" style="background:#00f0ff;"></span>
+              <span style="font-size:0.75rem; font-weight:800; color:#00f0ff; letter-spacing:0.12em; text-transform:uppercase;">Flagship Feature</span>
+            </div>
+            <h1 style="font-size:1.8rem; font-family:var(--font-heading); color:#ffffff; margin-top:4px;">One-Prompt Movie Maker</h1>
+            <p style="color:#94a3b8; font-size:0.9rem;">ONE PROMPT. ONE STORY. ONE COMPLETE MOVIE. Convert a single prompt into an end-to-end multi-scene cinematic movie.</p>
+          </div>
+        </div>
+
+        <!-- Character Memory Integration Bar (Part 5B) -->
+        <div class="movieCharacterSelector"></div>
+
+        <!-- Movie Input Card -->
+        <div class="studio-card" style="background:rgba(13,18,38,0.7); backdrop-filter:blur(20px); border:1px solid rgba(139,92,246,0.3); border-radius:var(--radius-lg); padding:24px;">
+          <label class="form-label" style="font-size:0.95rem; font-weight:700; color:#ffffff; margin-bottom:10px;">
+            🎬 Enter Your Movie Prompt or Story Vision
+          </label>
+          <div class="prompt-composer" style="margin-bottom:16px;">
+            <textarea id="moviePromptInput" class="prompt-textarea" style="min-height:90px;" placeholder="A lone cyber warrior enters an ancient floating temple in the Himalayas during a cosmic eclipse to retrieve a glowing quantum lotus that holds the memory of Earth..."></textarea>
+            
+            <div class="prompt-actions-bar">
+              <div class="prompt-pills-row">
+                <span class="prompt-pill" onclick="document.getElementById('moviePromptInput').value = 'A cyberpunk detective in 2099 discovers an ancient alien relic inside a neon alley in Neo-Hyderabad';">⚡ Cyberpunk Hyderabad</span>
+                <span class="prompt-pill" onclick="document.getElementById('moviePromptInput').value = 'Mass hero introduction in a rural dust storm with heavy brass elevation and fiery slow-motion action';">🔥 Mass Tollywood Hero</span>
+                <span class="prompt-pill" onclick="document.getElementById('moviePromptInput').value = 'A deep-space navigator discovers a celestial living nebula that sings ancient symphonies of forgotten galaxies';">🌌 Cosmic Nebula Voyage</span>
+                <span class="prompt-pill" onclick="document.getElementById('moviePromptInput').value = 'Ancient Vedic warriors defend a sacred golden city against shadowy invaders with glowing celestial astras';">🏹 Vedic Mythological Epic</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Configuration Controls -->
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:14px; margin-bottom:20px;">
+            <div>
+              <label class="form-label">Genre & Style</label>
+              <select id="movieGenreSelect" class="auth-input" style="padding-left:12px;">
+                <option value="cinematic">Cinematic Hollywood (35mm Anamorphic)</option>
+                <option value="telugu_mass">Tollywood Mass Hero (High Octane)</option>
+                <option value="telugu_scifi">Andhra 2050 Cyberpunk</option>
+                <option value="telugu_mythological">Mythological Vedic Epic</option>
+                <option value="telugu_emotional">Emotional Nostalgic Flashback</option>
+                <option value="tech">Cyberpunk High-Tech</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="form-label">Script & Voice Language</label>
+              <select id="movieLangSelect" class="auth-input" style="padding-left:12px;">
+                <option value="english">English (US / Global Cinematic)</option>
+                <option value="telugu">Pure Telugu (తెలుగు సినీ శైలి)</option>
+                <option value="teluglish">Teluglish (Telugu-English Mixed)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="form-label">Aspect Ratio</label>
+              <select id="movieAspectSelect" class="auth-input" style="padding-left:12px;">
+                <option value="16:9">16:9 Landscape (Widescreen 1080p)</option>
+                <option value="9:16">9:16 Vertical (Shorts & Reels)</option>
+                <option value="1:1">1:1 Square (Instagram Feed)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="form-label">Scene Transitions</label>
+              <select id="movieTransitionSelect" class="auth-input" style="padding-left:12px;">
+                <option value="crossfade">Cinematic Crossfade</option>
+                <option value="dissolve">Smooth Dissolve</option>
+                <option value="glitch">Cyberpunk Glitch</option>
+                <option value="zoom">Dynamic Zoom Blur</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <button type="button" id="btnDeconstructMovie" class="btn-outline" style="padding:12px 22px; font-weight:700;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <span>Deconstruct & Plan Scenes</span>
+            </button>
+            <button type="button" id="btnProduceMovie" class="btn-cta" style="padding:12px 26px; font-weight:700;" disabled>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>Produce Complete Movie</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Multi-Scene Timeline Container -->
+        <div id="movieSceneTimelineContainer"></div>
+
+        <!-- Live Movie Synthesis & Video Player Container -->
+        <div id="movieRenderStatus" style="display:none;"></div>
+      </section>
+
+      <!-- ====================================================================
+           PAGE 2: CREATE VIDEO (FAST SINGLE SCENE GENERATOR)
+           ==================================================================== -->
+      <section id="page-create-video" class="page-view">
+        <div class="page-title-row" style="margin-bottom:20px;">
+          <div>
+            <h1 style="font-size:1.8rem; font-family:var(--font-heading); color:#ffffff;">Create Video</h1>
+            <p style="color:#94a3b8; font-size:0.9rem;">Generate cinematic video sequences from text prompts with customizable camera motions and aspect ratios.</p>
+          </div>
+        </div>
+
+        <!-- Studio Workspace Grid -->
+        <div class="studio-container">
+          <div class="studio-canvas">
+            <!-- Video Player Preview Viewport -->
+            <div class="video-preview-viewport">
+              <div class="preview-badge" id="previewBadge">Preview &bull; Ready</div>
+              <video id="studioVideoPlayer" class="video-element" controls playsinline preload="metadata" poster="/samples/cyberpunk_city_thumb.jpg">
+                <source id="videoSourceMp4" src="/samples/cyberpunk_city.mp4" type="video/mp4">
+              </video>
+              <div class="generation-progress-overlay" id="generationProgressOverlay">
+                <div class="spinner-ring"></div>
+                <div class="progress-step-text" id="progressStepText">Initializing kinematics engine...</div>
+                <div class="progress-bar-container">
+                  <div class="progress-bar-fill" id="studioProgressBar"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Single Prompt Composer -->
+            <div class="prompt-composer">
+              <textarea id="promptInput" class="prompt-textarea" placeholder="Describe your cinematic scene... e.g., Futuristic flying vehicles navigating through neon-lit skyscrapers in rain"></textarea>
+              <div class="prompt-actions-bar">
+                <div class="prompt-pills-row">
+                  <span class="prompt-pill" onclick="document.getElementById('promptInput').value = 'Cyberpunk city with neon reflections and volumetric light';">🌆 Cyberpunk</span>
+                  <span class="prompt-pill" onclick="document.getElementById('promptInput').value = 'Lush waterfall cascading down emerald moss cliffs in golden hour';">🌿 Nature</span>
+                  <span class="prompt-pill" onclick="document.getElementById('promptInput').value = 'Swirling cosmic nebula with stardust and radiant supernova';">🌌 Space</span>
+                  <span class="prompt-pill" onclick="document.getElementById('promptInput').value = 'Tollywood mass hero entry in dust storm with fiery backlighting';">🔥 Tollywood Mass</span>
+                </div>
+                <div style="display:flex; gap:8px;">
+                  <button id="btnEnhancePrompt" class="btn-outline" style="padding:6px 12px; font-size:0.8rem;">✨ Enhance Prompt</button>
+                  <button id="btnGenerate" class="btn-cta" style="padding:8px 18px;">Generate Video</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Studio Parameter Inspector -->
+          <div class="studio-inspector">
+            <h3 style="font-size:1.05rem; font-family:var(--font-heading); color:#ffffff; border-bottom:1px solid rgba(139,92,246,0.2); padding-bottom:10px;">Camera & Parameters</h3>
+            <div class="inspector-section">
+              <label class="form-label">Aspect Ratio</label>
+              <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px;">
+                <button class="btn-outline active" style="padding:6px;" onclick="VickyGenerator.setAspectRatio('16:9', this)">16:9 Landscape</button>
+                <button class="btn-outline" style="padding:6px;" onclick="VickyGenerator.setAspectRatio('9:16', this)">9:16 Shorts</button>
+                <button class="btn-outline" style="padding:6px;" onclick="VickyGenerator.setAspectRatio('1:1', this)">1:1 Square</button>
+              </div>
+            </div>
+
+            <div class="inspector-section">
+              <label class="form-label">Camera Motion Trajectory</label>
+              <select id="cameraMotionSelect" class="auth-input" style="padding-left:12px;">
+                <option value="zoom_in">Dynamic Zoom-In (Kinematic)</option>
+                <option value="pan_left">Smooth Pan Left</option>
+                <option value="orbit">Orbit 360 Sweep</option>
+                <option value="crane_down">Cinematic Crane Down</option>
+                <option value="dutch_tilt">Dutch Angle Push</option>
+              </select>
+            </div>
+
+            <div class="inspector-section">
+              <label class="form-label">Duration & Frame Rate</label>
+              <div style="display:flex; justify-content:space-between; font-size:0.82rem; color:#94a3b8; margin-bottom:4px;">
+                <span>Duration</span>
+                <span id="durationValLabel">3s</span>
+              </div>
+              <input type="range" id="durationSlider" min="2" max="10" value="3" style="width:100%; accent-color:#8b5cf6;" oninput="document.getElementById('durationValLabel').textContent = this.value + 's'">
+            </div>
+
+            <div class="inspector-section">
+              <label class="form-label">Foundation Model</label>
+              <select id="modelSelect" class="auth-input" style="padding-left:12px;">
+                <option value="ffmpeg-procedural">FFmpeg Procedural Synthesizer (Instant H.264 MP4)</option>
+                <option value="wan-2.1">Wan 2.1 (T2V 14B - GPU Backend)</option>
+                <option value="animatediff-xl">AnimateDiff XL v3</option>
+                <option value="svd-xt">Stable Video Diffusion (SVD-XT)</option>
+              </select>
+            </div>
+
+            <div class="inspector-section" style="margin-top:auto;">
+              <a id="btnDownloadCurrent" href="/samples/cyberpunk_city.mp4" download="vicky_video.mp4" class="btn-cta" style="width:100%; justify-content:center;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Download Current MP4</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           PAGE 3: IMAGE TO VIDEO (SVD-XT)
+           ==================================================================== -->
+      <section id="page-image-to-video" class="page-view">
+        <div class="page-title-row" style="margin-bottom:20px;">
+          <div>
+            <h1 style="font-size:1.8rem; font-family:var(--font-heading); color:#ffffff;">Image to Video</h1>
+            <p style="color:#94a3b8; font-size:0.9rem;">Upload any still photo or character art to synthesize realistic fluid camera motions powered by Stable Video Diffusion.</p>
+          </div>
+        </div>
+
+        <div class="studio-card" style="background:rgba(13,18,38,0.7); backdrop-filter:blur(20px); border:1px solid rgba(139,92,246,0.3); border-radius:var(--radius-lg); padding:24px;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+            <div>
+              <label class="form-label">Upload Reference Image</label>
+              <div id="i2vDropzone" style="border:2px dashed rgba(139,92,246,0.4); border-radius:12px; padding:30px; text-align:center; cursor:pointer; background:rgba(6,9,20,0.6);" onclick="document.getElementById('i2vFileInput').click()">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" style="margin-bottom:10px;"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <div style="font-weight:600; color:#ffffff;">Click or Drag & Drop Image Here</div>
+                <div style="font-size:0.8rem; color:#94a3b8; margin-top:4px;">Supports PNG, JPG, WebP up to 20MB</div>
+                <input type="file" id="i2vFileInput" accept="image/*" style="display:none;" onchange="handleImageToVideoUpload(this)">
+              </div>
+              <img id="i2vPreviewImg" src="/samples/ai_robot_portrait_thumb.jpg" style="width:100%; max-height:220px; object-fit:cover; border-radius:8px; margin-top:12px; display:block; border:1px solid rgba(139,92,246,0.3);" alt="Input preview">
+            </div>
+
+            <div>
+              <label class="form-label">Motion Guidance Prompt</label>
+              <textarea id="i2vPromptInput" class="auth-input" style="min-height:90px; padding:12px;" placeholder="Smooth camera orbit around character face, intense eye reflection, ambient dust drift..."></textarea>
+
+              <div style="margin-top:14px;">
+                <label class="form-label">Motion Trajectory</label>
+                <select id="i2vMotionSelect" class="auth-input" style="padding-left:12px;">
+                  <option value="zoom_in">Slow Dramatic Push-In</option>
+                  <option value="pan_left">Cinematic Left Pan</option>
+                  <option value="orbit">3D Parallax Orbit</option>
+                  <option value="dutch_tilt">Dynamic Dutch Angle</option>
+                </select>
+              </div>
+
+              <div style="margin-top:18px;">
+                <button id="btnAnimateImage" class="btn-cta" style="width:100%; justify-content:center; padding:12px;" onclick="generateImageAnimation()">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <span>Animate Image to Video</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div id="i2vResultContainer" style="margin-top:24px; display:none;"></div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           PAGE 4: STORY TO VIDEO (AI STORY DIRECTOR - Part 5C & 6)
+           ==================================================================== -->
+      <section id="page-story-to-video" class="page-view">
+        <div class="page-title-row" style="margin-bottom:20px;">
+          <div>
+            <h1 style="font-size:1.8rem; font-family:var(--font-heading); color:#ffffff;">AI Story Director</h1>
+            <p style="color:#94a3b8; font-size:0.9rem;">Automatically generate structured screenplays, camera instructions, scene breakdowns, narration voiceovers, and SRT subtitles from an initial idea.</p>
+          </div>
+        </div>
+
+        <div class="studio-card" style="background:rgba(13,18,38,0.7); backdrop-filter:blur(20px); border:1px solid rgba(139,92,246,0.3); border-radius:var(--radius-lg); padding:24px;">
+          <div style="display:grid; grid-template-columns:1fr 280px; gap:20px;">
+            <div>
+              <label class="form-label">Story Concept / Logline</label>
+              <textarea id="storyDirectorPrompt" class="auth-input" style="min-height:90px; padding:12px;" placeholder="A time-traveling archaeologist unearths an ancient Vedic supercomputer in the ruins of Hampi, triggering a quantum holographic broadcast across modern India..."></textarea>
+            </div>
+            <div>
+              <label class="form-label">Tone & Genre</label>
+              <select id="storyDirectorGenre" class="auth-input" style="padding-left:12px; margin-bottom:10px;">
+                <option value="cinematic">Cinematic Hollywood</option>
+                <option value="telugu_mass">Tollywood Mass Action</option>
+                <option value="telugu_scifi">Sci-Fi Andhra 2050</option>
+                <option value="telugu_mythological">Mythological Epic</option>
+                <option value="education">Documentary & Tech</option>
+              </select>
+
+              <label class="form-label">Narration Language</label>
+              <select id="storyDirectorLang" class="auth-input" style="padding-left:12px; margin-bottom:14px;">
+                <option value="english">English (Cinematic)</option>
+                <option value="telugu">Pure Telugu (తెలుగు)</option>
+                <option value="teluglish">Teluglish (Bilingual)</option>
+              </select>
+
+              <button id="btnGenerateStoryDirector" class="btn-cta" style="width:100%; justify-content:center; padding:10px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                <span>Direct Complete Story</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Output Container -->
+          <div id="storyDirectorResultsContainer" style="display:none;"></div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           PAGE 5: TELUGU AI STUDIO (Part 5D & 6)
+           ==================================================================== -->
+      <section id="page-telugu-studio" class="page-view">
+        <div class="page-title-row" style="margin-bottom:20px;">
+          <div>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="pulse-dot" style="background:#fbbf24;"></span>
+              <span style="font-size:0.75rem; font-weight:800; color:#fbbf24; letter-spacing:0.12em; text-transform:uppercase;">Tollywood Creator Studio</span>
+            </div>
+            <h1 style="font-size:1.8rem; font-family:var(--font-heading); color:#ffffff; margin-top:4px;">తెలుగు AI Studio (Telugu AI Studio)</h1>
+            <p style="color:#94a3b8; font-size:0.9rem;">Specialized AI studio for Telugu films, YouTube creators, and Tollywood enthusiasts. Support for pure Telugu narration, Teluglish mixed scripts, and 5 cinematic presets.</p>
+          </div>
+        </div>
+
+        <!-- Tollywood Cinematic Preset Buttons -->
+        <div class="telugu-presets-row">
+          <button class="telugu-preset-pill active" data-preset="mass_hero" onclick="VickyTeluguStudio.selectPreset('mass_hero')">🔥 Mass Hero Elevation (హీరో ఎలివేషన్)</button>
+          <button class="telugu-preset-pill" data-preset="emotional_flashback" onclick="VickyTeluguStudio.selectPreset('emotional_flashback')">🌧️ Emotional Flashback (ఎమోషనల్)</button>
+          <button class="telugu-preset-pill" data-preset="scifi_andhra" onclick="VickyTeluguStudio.selectPreset('scifi_andhra')">⚡ Sci-Fi Andhra 2050 (సైన్స్ ఫిక్షన్)</button>
+          <button class="telugu-preset-pill" data-preset="mythological_epic" onclick="VickyTeluguStudio.selectPreset('mythological_epic')">🏹 Mythological Epic (పౌరాణిక కావ్యం)</button>
+          <button class="telugu-preset-pill" data-preset="village_action" onclick="VickyTeluguStudio.selectPreset('village_action')">🌾 Village Action Thriller (పల్లెటూరి యాక్షన్)</button>
+        </div>
+
+        <div class="studio-card" style="background:rgba(13,18,38,0.7); backdrop-filter:blur(20px); border:1px solid rgba(251,191,36,0.3); border-radius:var(--radius-lg); padding:24px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; flex-wrap:wrap; gap:10px;">
+            <label class="form-label" style="font-size:0.95rem; font-weight:700; color:#ffffff; margin:0;">
+              Telugu Script & Voiceover Narration:
+            </label>
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="font-size:0.8rem; color:#94a3b8;">Pure Telugu</span>
+              <label class="switch" style="position:relative; display:inline-block; width:38px; height:20px;">
+                <input type="checkbox" id="teluguModeToggle" onchange="VickyTeluguStudio.toggleLanguageMode(this.checked)" style="opacity:0; width:0; height:0;">
+                <span style="position:absolute; cursor:pointer; top:0; left:0; right:0; bottom:0; background:#334155; border-radius:20px; transition:0.3s;" id="teluguToggleBg"></span>
+              </label>
+              <span style="font-size:0.8rem; color:#fbbf24; font-weight:600;">Teluglish</span>
+            </div>
+          </div>
+
+          <textarea id="teluguScriptInput" class="auth-input" style="min-height:90px; padding:14px; font-size:1.05rem; font-family:'Noto Sans Telugu', sans-serif;" placeholder="ఒక్క అడుగు ముందుకు వేస్తే చరిత్ర తిరగరాయడం ఖాయం. భయమనే పదం నా నిఘంటువులోనే లేదు!"></textarea>
+
+          <div style="display:grid; grid-template-columns:1fr 220px 220px; gap:14px; margin-top:16px;">
+            <div>
+              <label class="form-label">Cinematic Camera Motion Guidance</label>
+              <input type="text" id="teluguVisualPrompt" class="auth-input" style="padding-left:12px;" value="Extreme low-angle slow-motion hero entry, dust storm explosion, fiery golden backlight">
+            </div>
+            <div>
+              <label class="form-label">Aspect Ratio</label>
+              <select id="teluguAspectSelect" class="auth-input" style="padding-left:12px;">
+                <option value="16:9">16:9 Landscape</option>
+                <option value="9:16">9:16 Shorts / Reels</option>
+                <option value="1:1">1:1 Square</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">Suggested BGM</label>
+              <div id="teluguBgmLabel" style="font-size:0.75rem; color:#fef08a; background:rgba(251,191,36,0.1); border:1px solid rgba(251,191,36,0.3); border-radius:8px; padding:10px; height:44px; display:flex; align-items:center;">
+                Thumping Dholak, Heavy Brass Elevation Beats
+              </div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:12px; margin-top:20px; flex-wrap:wrap;">
+            <button type="button" id="btnListenTeluguVoice" class="btn-outline" style="border-color:#fbbf24; color:#fbbf24; padding:10px 18px;">
+              <span>🔊 Test Telugu Voiceover</span>
+            </button>
+            <button type="button" id="btnProduceTeluguVideo" class="btn-cta" style="background:linear-gradient(135deg, #f59e0b, #ef4444); padding:10px 24px; font-weight:700;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>Produce Telugu Cinematic Video</span>
+            </button>
+          </div>
+
+          <!-- Result Container -->
+          <div id="teluguResultBox" style="display:none; margin-top:20px;"></div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           PAGE 6: THUMBNAIL GENERATOR (AI THUMBNAIL STUDIO - Part 5G & 6)
+           ==================================================================== -->
+      <section id="page-thumbnail-generator" class="page-view">
+        <div class="page-title-row" style="margin-bottom:20px;">
+          <div>
+            <h1 style="font-size:1.8rem; font-family:var(--font-heading); color:#ffffff;">AI Thumbnail Studio</h1>
+            <p style="color:#94a3b8; font-size:0.9rem;">Generate high-CTR movie posters and YouTube/Reels thumbnails with viral typography styles, badges, and instant high-res PNG export.</p>
+          </div>
+        </div>
+
+        <div class="thumbnail-studio-layout">
+          <!-- Canvas Viewport -->
+          <div class="thumb-canvas-box">
+            <canvas id="thumbnailCanvas" width="1280" height="720" class="thumb-canvas-preview"></canvas>
+            <div style="display:flex; gap:12px; margin-top:16px;">
+              <button class="btn-outline" onclick="VickyThumbnailStudio.setAspectRatio('16:9')">16:9 YouTube (1280x720)</button>
+              <button class="btn-outline" onclick="VickyThumbnailStudio.setAspectRatio('9:16')">9:16 Shorts/Reels (720x1280)</button>
+            </div>
+          </div>
+
+          <!-- Controls Panel -->
+          <div class="thumb-controls-panel">
+            <h3 style="color:#ffffff; font-size:1rem; font-family:var(--font-heading);">Viral Typography & Badges</h3>
+            
+            <div>
+              <label class="form-label">Main Headline Text</label>
+              <input type="text" id="thumbTextMain" class="auth-input" value="SHOCKING TWIST!" style="padding-left:12px; font-weight:700;">
+            </div>
+
+            <div>
+              <label class="form-label">Subtitle / Hook Line</label>
+              <input type="text" id="thumbTextSub" class="auth-input" value="ONE PROMPT. ONE COMPLETE MOVIE." style="padding-left:12px;">
+            </div>
+
+            <div>
+              <label class="form-label">Typography Preset Style</label>
+              <select id="thumbStyleSelect" class="auth-input" style="padding-left:12px;">
+                <option value="youtube_yellow">YouTube High-CTR Bold Yellow (Heavy Stroke)</option>
+                <option value="cyber_neon">Electric Cyber Neon (Cyan / Purple Glow)</option>
+                <option value="hollywood_gold">Hollywood 3D Gold Glow</option>
+                <option value="tollywood_mass">Tollywood Mass Fire Red / Gold</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="form-label">Badge Sticker</label>
+              <select id="thumbBadgeSelect" class="auth-input" style="padding-left:12px;">
+                <option value="4K UHD">🔴 4K UHD Badge</option>
+                <option value="OFFICIAL TRAILER">🎬 OFFICIAL TRAILER</option>
+                <option value="NEW">⚡ NEW RELEASE</option>
+                <option value="MUST WATCH">🔥 MUST WATCH</option>
+                <option value="none">No Badge</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="form-label">Background Prompt or Upload</label>
+              <input type="text" id="thumbAiPrompt" class="auth-input" placeholder="e.g. Cyberpunk city portal in rain" style="padding-left:12px; margin-bottom:8px;">
+              <div style="display:flex; gap:6px;">
+                <button type="button" class="btn-outline" style="flex:1; font-size:0.75rem;" onclick="VickyThumbnailStudio.generateAiBackground()">Generate AI BG</button>
+                <button type="button" class="btn-outline" style="flex:1; font-size:0.75rem;" onclick="document.getElementById('thumbBgUpload').click()">Upload Image</button>
+              </div>
+              <input type="file" id="thumbBgUpload" accept="image/*" style="display:none;">
+            </div>
+
+            <div style="display:flex; gap:16px;">
+              <label class="checkbox-label" style="margin:0;">
+                <input type="checkbox" id="thumbVignetteToggle" checked>
+                <span>Dark Vignette</span>
+              </label>
+              <label class="checkbox-label" style="margin:0;">
+                <input type="checkbox" id="thumbLetterboxToggle" checked>
+                <span>Cinema Bars</span>
+              </label>
+            </div>
+
+            <button type="button" id="btnDownloadThumbnail" class="btn-cta" style="width:100%; justify-content:center; padding:12px; margin-top:10px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Download High-Res PNG</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           PAGE 7: AUTO VIDEO EDITOR (Part 5E & 6)
+           ==================================================================== -->
+      <section id="page-video-editor" class="page-view">
+        <div class="page-title-row" style="margin-bottom:20px;">
+          <div>
+            <h1 style="font-size:1.8rem; font-family:var(--font-heading); color:#ffffff;">Auto Video Editor</h1>
+            <p style="color:#94a3b8; font-size:0.9rem;">Automatically combine scenes, voiceovers, background music, transitions, and burned-in subtitles into unified MP4 videos.</p>
+          </div>
+        </div>
+
+        <div class="studio-card" style="background:rgba(13,18,38,0.7); backdrop-filter:blur(20px); border:1px solid rgba(139,92,246,0.3); border-radius:var(--radius-lg); padding:24px;">
+          <div style="display:grid; grid-template-columns:1fr 300px; gap:20px;">
+            <div>
+              <div class="movie-player-wrapper" style="margin-bottom:16px;">
+                <video id="editorVideoSource" src="/samples/cyberpunk_city.mp4" controls playsinline class="movie-video-element"></video>
+              </div>
+
+              <!-- Multi-Track Timeline Visualizer -->
+              <div style="background:#060914; border:1px solid rgba(139,92,246,0.25); border-radius:10px; padding:14px;">
+                <div style="display:flex; justify-content:space-between; margin-bottom:8px; font-size:0.8rem; color:#94a3b8;">
+                  <span>🎬 Video Track (Scene 1 &bull; 480p)</span>
+                  <span>Audio Sync: Enabled</span>
+                </div>
+                <div style="height:36px; background:rgba(139,92,246,0.2); border:1px solid #8b5cf6; border-radius:6px; display:flex; align-items:center; padding:0 12px; color:#ffffff; font-size:0.8rem; font-weight:600; margin-bottom:10px;">
+                  Clip 1: Visual Motion &bull; 00:00 - 00:04
+                </div>
+
+                <div style="display:flex; justify-content:space-between; margin-bottom:8px; font-size:0.8rem; color:#94a3b8;">
+                  <span>🎙️ Voiceover Narration Track</span>
+                  <span>Synced</span>
+                </div>
+                <div style="height:30px; background:rgba(6,182,212,0.2); border:1px solid #06b6d4; border-radius:6px; display:flex; align-items:center; padding:0 12px; color:#67e8f9; font-size:0.75rem; font-weight:600; margin-bottom:10px;">
+                  Voiceover: Neural Audio Track &bull; 44.1kHz AAC
+                </div>
+
+                <div style="display:flex; justify-content:space-between; margin-bottom:8px; font-size:0.8rem; color:#94a3b8;">
+                  <span>🎵 Ambient BGM Track</span>
+                  <span>Volume Ducking -12dB</span>
+                </div>
+                <div style="height:30px; background:rgba(245,158,11,0.2); border:1px solid #f59e0b; border-radius:6px; display:flex; align-items:center; padding:0 12px; color:#fde047; font-size:0.75rem; font-weight:600;">
+                  BGM: Cinematic Ambient Synthwave
+                </div>
+              </div>
+            </div>
+
+            <!-- Editor Controls -->
+            <div style="display:flex; flex-direction:column; gap:16px;">
+              <div>
+                <label class="form-label">Transition Style</label>
+                <select id="editorTransitionSelect" class="auth-input" style="padding-left:12px;">
+                  <option value="fade">Cinematic Fade</option>
+                  <option value="dissolve">Smooth Dissolve</option>
+                  <option value="wipe">Dynamic Wipe</option>
+                  <option value="zoom">Zoom Motion</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="form-label">BGM Soundtrack</label>
+                <select id="editorBgmSelect" class="auth-input" style="padding-left:12px;">
+                  <option value="synthwave">Cyberpunk Synthwave</option>
+                  <option value="orchestral">Hans Zimmer Orchestral</option>
+                  <option value="tollywood">Tollywood Mass Brass</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="form-label">Subtitle Styling</label>
+                <select class="auth-input" style="padding-left:12px;">
+                  <option>Bold Yellow Karaoke (Alex Hormozi Style)</option>
+                  <option>Cyberpunk Glowing Cyan</option>
+                  <option>Telugu Typography (తెలుగు ఫాంట్)</option>
+                  <option>Classic Cinematic White</option>
+                </select>
+              </div>
+
+              <button id="btnExportFinalVideo" class="btn-cta" style="width:100%; justify-content:center; padding:12px; margin-top:auto;" onclick="VickyEditor.renderAndExport()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                <span>Render & Export MP4</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           PAGE 8: MY CREATIONS (PORTFOLIO & HISTORY - Part 6)
+           ==================================================================== -->
+      <section id="page-my-creations" class="page-view">
+        <div class="page-title-row" style="margin-bottom:20px;">
+          <div>
+            <h1 style="font-size:1.8rem; font-family:var(--font-heading); color:#ffffff;">My Creations</h1>
+            <p style="color:#94a3b8; font-size:0.9rem;">Your personal studio library of rendered cinematic videos, movies, and animated stories with direct MP4 downloads.</p>
+          </div>
+          <a href="#create-movie" class="btn-cta">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <span>Create New Movie</span>
+          </a>
+        </div>
+
+        <div id="projectsGrid" class="showcase-grid"></div>
+      </section>
+
+      <!-- ====================================================================
+           PAGE 9: VIDEO DOWNLOADS (SOCIAL MEDIA EXPORT - Part 5F & 6)
+           ==================================================================== -->
+      <section id="page-downloads" class="page-view">
+        <div class="page-title-row" style="margin-bottom:20px;">
+          <div>
+            <h1 style="font-size:1.8rem; font-family:var(--font-heading); color:#ffffff;">Video Downloads & Social Presets</h1>
+            <p style="color:#94a3b8; font-size:0.9rem;">Export your generated movies with calibrated aspect ratios and safe zones for YouTube, Shorts, Instagram Reels, Facebook, and TikTok.</p>
+          </div>
+        </div>
+
+        <!-- Social Media Presets Grid -->
+        <div id="socialPresetsGrid" class="social-presets-grid"></div>
+
+        <div id="socialPresetInfo" style="background:rgba(18,24,48,0.6); border:1px solid rgba(6,182,212,0.3); border-radius:12px; padding:16px; margin-bottom:24px;"></div>
+
+        <h3 style="font-size:1.2rem; font-family:var(--font-heading); color:#ffffff; margin-bottom:14px;">Recent Export Queue</h3>
+        <div id="downloadHistoryList"></div>
+      </section>
+
+      <!-- ====================================================================
+           PAGE 10: SETTINGS (SUPABASE & USER CONFIG - Part 4 & 6)
+           ==================================================================== -->
+      <section id="page-settings" class="page-view">
+        <div class="page-title-row" style="margin-bottom:20px;">
+          <div>
+            <h1 style="font-size:1.8rem; font-family:var(--font-heading); color:#ffffff;">Studio Settings</h1>
+            <p style="color:#94a3b8; font-size:0.9rem;">Manage Supabase authentication keys, profile credentials, generation credits, and video rendering preferences.</p>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+          <!-- Supabase Config Card -->
+          <div class="studio-card" style="background:rgba(13,18,38,0.7); backdrop-filter:blur(20px); border:1px solid rgba(139,92,246,0.3); border-radius:var(--radius-lg); padding:24px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;">
+              <h3 style="color:#ffffff; font-size:1.1rem; font-family:var(--font-heading);">Supabase Authentication</h3>
+              <span class="pulse-dot" style="background:#10b981;"></span>
+            </div>
+            <p style="font-size:0.85rem; color:#94a3b8; line-height:1.5; margin-bottom:16px;">
+              VICKY AI supports live Supabase Auth with session persistence, Google OAuth, and password reset. Configure your keys below or in your <code>.env</code> file.
+            </p>
+
+            <div class="form-group">
+              <label class="form-label">Supabase Project URL</label>
+              <input type="text" id="settingsSupabaseUrl" class="auth-input" placeholder="https://your-project.supabase.co" style="padding-left:14px;">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Supabase Anon Public Key</label>
+              <input type="password" id="settingsSupabaseKey" class="auth-input" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." style="padding-left:14px;">
+            </div>
+
+            <button type="button" id="btnSaveSettings" class="btn-cta" style="padding:10px 20px; margin-top:10px;">
+              Save Supabase Keys
+            </button>
+          </div>
+
+          <!-- User Profile & Credits Card -->
+          <div class="studio-card" style="background:rgba(13,18,38,0.7); backdrop-filter:blur(20px); border:1px solid rgba(139,92,246,0.3); border-radius:var(--radius-lg); padding:24px;">
+            <h3 style="color:#ffffff; font-size:1.1rem; font-family:var(--font-heading); margin-bottom:14px;">Creator Account Status</h3>
+            <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+              <div class="user-avatar" style="width:50px; height:50px; font-size:1.2rem;">V</div>
+              <div>
+                <div style="font-weight:700; color:#ffffff; font-size:1.05rem;" id="settingsUserName">Vicky Creator</div>
+                <div style="font-size:0.82rem; color:#94a3b8;" id="settingsUserEmail">creator@vickyai.com</div>
+              </div>
+            </div>
+
+            <div style="background:rgba(22,28,54,0.7); border:1px solid rgba(139,92,246,0.25); border-radius:10px; padding:14px; margin-bottom:16px;">
+              <div style="font-size:0.8rem; color:#94a3b8; margin-bottom:4px;">Available Credits:</div>
+              <div style="font-size:1.4rem; font-weight:800; color:#00f0ff;">500 Generation Credits</div>
+              <div style="font-size:0.75rem; color:#10b981; margin-top:4px;">✨ 100% Free Open-Source Architecture</div>
+            </div>
+
+            <div style="display:flex; gap:10px;">
+              <a href="/login" class="btn-outline" style="flex:1; text-align:center;">Switch Account</a>
+              <button class="btn-outline" style="flex:1; border-color:var(--danger); color:var(--danger);" onclick="VickyAuth.logout()">Sign Out</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           PAGE 11: HOME OVERVIEW (SHOWCASE & COMPARISON)
+           ==================================================================== -->
+      <section id="page-home" class="page-view">
+        <div class="hero-section">
+          <div class="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <span>ONE PROMPT. ONE STORY. ONE COMPLETE MOVIE.</span>
+          </div>
+
+          <h1 class="hero-title">
+            The World-Class <span>AI Video Studio</span> Built for Filmmakers & Creators
+          </h1>
+          <p class="hero-tagline" style="background:linear-gradient(135deg, #a855f7, #06b6d4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; font-weight:800;">
+            ONE PROMPT. ONE STORY. ONE COMPLETE MOVIE.
+          </p>
+          <p class="hero-description">
+            Convert a single prompt into an entire multi-scene cinematic movie with consistent Character Memory, AI Story Direction, Telugu AI Studio narration, and universal MP4 export. Zero paid API dependencies.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#create-movie" class="btn-cta" style="padding:14px 30px; font-size:1.05rem; background:linear-gradient(135deg, #a855f7 0%, #06b6d4 100%);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>Launch One-Prompt Movie Maker</span>
+            </a>
+            <a href="#telugu-studio" class="btn-outline" style="padding:14px 26px; border-color:#fbbf24; color:#fbbf24;">
+              <span>తెలుగు AI Studio</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- SEO Targeted Highlights -->
+        <div style="margin: 40px 0; text-align:center;">
+          <h2 style="font-size:1.6rem; color:#ffffff; margin-bottom:8px;">Vicky AI Video Generator - State-of-the-Art Architecture</h2>
+          <p style="color:var(--text-secondary); max-width:700px; margin:0 auto;">
+            Sleek cinematic interface powered by open-source foundation models. Seamlessly switch between Text to Video AI, Image to Video AI, Free AI Video Generator, and Telugu Tollywood Presets.
+          </p>
+        </div>
+
+        <!-- Live Showcase Grid -->
+        <div class="showcase-grid">
+          <div class="showcase-card">
+            <div class="showcase-media">
+              <span class="showcase-badge">Wan 2.1 &bull; 16:9</span>
+              <video class="showcase-video" src="/samples/cyberpunk_city.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="showcase-body">
+              <div class="showcase-prompt">Futuristic cyberpunk neon city with flying hover vehicles, raytraced reflections</div>
+              <div class="showcase-footer">
+                <span>Model: Wan 2.1 (T2V 14B)</span>
+                <a href="/api/download?file=cyberpunk_city.mp4&name=cyberpunk_city.mp4" class="btn-outline" style="padding:4px 10px; font-size:0.75rem;">Download MP4</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-card">
+            <div class="showcase-media">
+              <span class="showcase-badge">Wan 2.1 &bull; 16:9</span>
+              <video class="showcase-video" src="/samples/nature_waterfall.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="showcase-body">
+              <div class="showcase-prompt">Lush tropical rainforest with cascading waterfall and golden sunlight beams</div>
+              <div class="showcase-footer">
+                <span>Model: Wan 2.1 (T2V 14B)</span>
+                <a href="/api/download?file=nature_waterfall.mp4&name=nature_waterfall.mp4" class="btn-outline" style="padding:4px 10px; font-size:0.75rem;">Download MP4</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-card">
+            <div class="showcase-media">
+              <span class="showcase-badge">AnimateDiff &bull; 9:16 Shorts</span>
+              <video class="showcase-video" src="/samples/cosmic_nebula.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="showcase-body">
+              <div class="showcase-prompt">Deep cosmic nebula with swirling purple stardust and glowing interstellar cluster</div>
+              <div class="showcase-footer">
+                <span>Model: AnimateDiff XL</span>
+                <a href="/api/download?file=cosmic_nebula.mp4&name=cosmic_nebula.mp4" class="btn-outline" style="padding:4px 10px; font-size:0.75rem;">Download MP4</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="showcase-card">
+            <div class="showcase-media">
+              <span class="showcase-badge">SVD-XT &bull; 1:1 Square</span>
+              <video class="showcase-video" src="/samples/ai_robot_portrait.mp4" autoplay loop muted playsinline></video>
+            </div>
+            <div class="showcase-body">
+              <div class="showcase-prompt">Futuristic humanoid android face with glowing fiber optic circuitry</div>
+              <div class="showcase-footer">
+                <span>Model: Stable Video Diffusion</span>
+                <a href="/api/download?file=ai_robot_portrait.mp4&name=ai_robot_portrait.mp4" class="btn-outline" style="padding:4px 10px; font-size:0.75rem;">Download MP4</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           PAGE 12: ABOUT US
+           ==================================================================== -->
+      <section id="page-about" class="page-view">
+        <div class="page-title-row" style="margin-bottom:20px;">
+          <div>
+            <h1 style="font-size:1.8rem; font-family:var(--font-heading); color:#ffffff;">About VICKY AI</h1>
+            <p style="color:#94a3b8; font-size:0.9rem;">ONE PROMPT. ONE STORY. ONE COMPLETE MOVIE.</p>
+          </div>
+        </div>
+
+        <div class="studio-card" style="background:rgba(13,18,38,0.7); backdrop-filter:blur(20px); border:1px solid rgba(139,92,246,0.3); border-radius:var(--radius-lg); padding:30px; line-height:1.7; color:#cbd5e1;">
+          <h2 style="color:#ffffff; margin-bottom:12px; font-family:var(--font-heading);">Our Vision</h2>
+          <p style="margin-bottom:16px;">
+            VICKY AI is designed with an uncompromising cinematic identity. Unlike typical generic AI wrappers, VICKY AI empowers filmmakers, YouTubers, storytellers, and developers to transform single prompts into full, multi-scene movies with character consistency across scenes, dynamic camera direction, and authentic Telugu cinema workflows.
+          </p>
+          <p>
+            By combining open-source foundation models (Wan 2.1, Stable Video Diffusion, AnimateDiff) with high-speed procedural synthesis and client-side web audio, VICKY AI delivers instant, free generation without paid third-party API dependencies.
+          </p>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           PAGE 13: CONTACT & SEO
+           ==================================================================== -->
+      <section id="page-contact" class="page-view">
+        <div class="page-title-row" style="margin-bottom:20px;">
+          <div>
+            <h1 style="font-size:1.8rem; font-family:var(--font-heading); color:#ffffff;">Contact & Google Search Console</h1>
+            <p style="color:#94a3b8; font-size:0.9rem;">Submit feedback or register your Google Search Console verification token for immediate sitemap indexing.</p>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+          <div class="studio-card" style="background:rgba(13,18,38,0.7); backdrop-filter:blur(20px); border:1px solid rgba(139,92,246,0.3); border-radius:var(--radius-lg); padding:24px;">
+            <h3 style="color:#ffffff; font-size:1.1rem; margin-bottom:12px; font-family:var(--font-heading);">Google Search Console Verification</h3>
+            <p style="font-size:0.85rem; color:#94a3b8; margin-bottom:14px;">Register your site verification meta tag directly into the server metadata.</p>
+            <div class="form-group">
+              <label class="form-label">GSC Verification Token</label>
+              <input type="text" id="gscTokenInput" class="auth-input" placeholder="google-site-verification-token" style="padding-left:14px;">
+            </div>
+            <button type="button" id="btnVerifyGSC" class="btn-cta" style="padding:10px 20px;">Register Token & Ping Sitemap</button>
+          </div>
+
+          <div class="studio-card" style="background:rgba(13,18,38,0.7); backdrop-filter:blur(20px); border:1px solid rgba(139,92,246,0.3); border-radius:var(--radius-lg); padding:24px;">
+            <h3 style="color:#ffffff; font-size:1.1rem; margin-bottom:12px; font-family:var(--font-heading);">Contact Support</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label class="form-label">Your Email</label>
+                <input type="email" class="auth-input" placeholder="creator@gmail.com" required style="padding-left:14px;">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Message</label>
+                <textarea class="auth-input" style="min-height:80px; padding:12px;" required placeholder="Tell us how we can assist your creative workflow..."></textarea>
+              </div>
+              <button type="submit" class="btn-outline" style="padding:10px 20px;">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- ==========================================================================
+       SCRIPTS ARCHITECTURE
+       ========================================================================== -->
+  <script src="/js/supabase_auth.js"></script>
+  <script src="/js/character_memory.js"></script>
+  <script src="/js/movie_maker.js"></script>
+  <script src="/js/story_director.js"></script>
+  <script src="/js/telugu_studio.js"></script>
+  <script src="/js/thumbnail_studio.js"></script>
+  <script src="/js/social_export.js"></script>
+  <script src="/js/generator.js"></script>
+  <script src="/js/video_editor.js"></script>
+  <script src="/js/projects.js"></script>
+  <script src="/js/app.js"></script>
+
+  <script>
+    // Inline helper for Image to Video file upload preview
+    function handleImageToVideoUpload(input) {
+      if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const img = document.getElementById('i2vPreviewImg');
+          if (img) img.src = e.target.result;
+        };
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    async function generateImageAnimation() {
+      const prompt = document.getElementById('i2vPromptInput').value.trim() || 'Dynamic camera motion';
+      const motion = document.getElementById('i2vMotionSelect').value;
+      const imgEl = document.getElementById('i2vPreviewImg');
+      const btn = document.getElementById('btnAnimateImage');
+      const resultBox = document.getElementById('i2vResultContainer');
+
+      btn.disabled = true;
+      btn.innerHTML = `<span class="spinner-sm"></span> Animating with SVD-XT...`;
+
+      try {
+        const res = await fetch('/api/generate/image-to-video', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            prompt: prompt,
+            camera_motion: motion,
+            image_base64: imgEl ? imgEl.src : ''
+          })
+        });
+        const data = await res.json();
+        if (data.video_url) {
+          resultBox.style.display = 'block';
+          resultBox.innerHTML = `
+            <div class="movie-completed-box">
+              <div class="movie-success-banner">✨ Image Animation Complete! (H.264 MP4)</div>
+              <div class="movie-player-wrapper">
+                <video src="${data.video_url}" controls autoplay loop class="movie-video-element"></video>
+              </div>
+              <a href="/api/download?file=${encodeURIComponent(data.video_url)}&name=image_animation.mp4" class="btn-cta" style="display:inline-flex;">Download MP4</a>
+            </div>
+          `;
+        }
+      } catch (e) {
+        if (window.VickyApp) VickyApp.showToast('Image animation error: ' + e.message, 'error');
+        else alert('Image animation error: ' + e.message);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = `<span>Animate Image to Video</span>`;
+      }
+    }
+
+    // Auto-initialize modules on DOM ready
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.VickyCharacterMemory) VickyCharacterMemory.init();
+      if (window.VickyMovieMaker) VickyMovieMaker.init();
+      if (window.VickyStoryDirector) VickyStoryDirector.init();
+      if (window.VickyTeluguStudio) VickyTeluguStudio.init();
+      if (window.VickyThumbnailStudio) VickyThumbnailStudio.init();
+      if (window.VickySocialExport) VickySocialExport.init();
+    });
+  </script>
+</body>
+</html>

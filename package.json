@@ -1,19 +1,27 @@
 {
-  "name": "narasimha-pg-hostel-manager",
-  "version": "3.0.0",
-  "description": "Commercial PG Hostel Management SaaS with Multi-Hostel, Sharing Pricing, Student Management & Automated Rent Reminders",
+  "name": "vicky-ai",
+  "version": "1.0.0",
+  "description": "VICKY AI VIDEO STUDIO - ONE PROMPT. ONE STORY. ONE COMPLETE MOVIE. Next-Gen AI Video Generation Platform",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "node tests/test_saas_full.js"
+    "dev": "node server.js",
+    "backend:py": "python backend/app.py",
+    "test": "node tests/test_api.js && node tests/test_seo.js && node tests/test_video_generation.js && node tests/test_vicky_features.js",
+    "test:live": "node tests/test_live_generation.js"
   },
   "keywords": [
-    "pg-hostel-manager",
-    "hostel-management",
-    "saas",
-    "rent-reminders",
-    "hyderabad"
+    "vicky-ai",
+    "ai-video-generator",
+    "text-to-video",
+    "image-to-video",
+    "open-source-ai",
+    "wan-video",
+    "stable-video-diffusion",
+    "animatediff",
+    "comfyui",
+    "google-ai-studio"
   ],
-  "author": "Antigravity Senior Full-Stack Engineer",
-  "license": "ISC"
+  "author": "VICKY AI Team",
+  "license": "MIT"
 }

@@ -1,0 +1,64 @@
+{
+  "prompt": {
+    "1": {
+      "inputs": {
+        "ckpt_name": "wan2.1_t2v_14B.safetensors"
+      },
+      "class_type": "CheckpointLoaderSimple"
+    },
+    "2": {
+      "inputs": {
+        "text": "Cinematic aerial drone shot of futuristic metropolis at dusk, volumetric god rays, 8k resolution, photorealistic",
+        "clip": ["1", 1]
+      },
+      "class_type": "CLIPTextEncode"
+    },
+    "3": {
+      "inputs": {
+        "text": "low quality, blurry, distorted, flicker, oversaturated, watermark, bad anatomy",
+        "clip": ["1", 1]
+      },
+      "class_type": "CLIPTextEncode"
+    },
+    "4": {
+      "inputs": {
+        "width": 1280,
+        "height": 720,
+        "length": 81,
+        "batch_size": 1
+      },
+      "class_type": "EmptyWanLatentVideo"
+    },
+    "5": {
+      "inputs": {
+        "seed": 42891,
+        "steps": 25,
+        "cfg": 6.0,
+        "sampler_name": "euler",
+        "scheduler": "simple",
+        "denoise": 1.0,
+        "model": ["1", 0],
+        "positive": ["2", 0],
+        "negative": ["3", 0],
+        "latent_image": ["4", 0]
+      },
+      "class_type": "KSampler"
+    },
+    "6": {
+      "inputs": {
+        "samples": ["5", 0],
+        "vae": ["1", 2]
+      },
+      "class_type": "VAEDecode"
+    },
+    "7": {
+      "inputs": {
+        "fps": 24,
+        "filename_prefix": "VICKY_AI_Wan21",
+        "format": "video/h264-mp4",
+        "images": ["6", 0]
+      },
+      "class_type": "VHS_VideoCombine"
+    }
+  }
+}

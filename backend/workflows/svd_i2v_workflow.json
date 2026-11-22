@@ -1,0 +1,62 @@
+{
+  "prompt": {
+    "1": {
+      "inputs": {
+        "ckpt_name": "svd_xt_1_1.safetensors"
+      },
+      "class_type": "ImageOnlyCheckpointLoader"
+    },
+    "2": {
+      "inputs": {
+        "image": "input_image.png",
+        "upload": "image"
+      },
+      "class_type": "LoadImage"
+    },
+    "3": {
+      "inputs": {
+        "width": 1024,
+        "height": 576,
+        "video_frames": 25,
+        "motion_bucket_id": 127,
+        "fps": 24,
+        "augmentation_level": 0.0,
+        "clip_vision": ["1", 1],
+        "init_image": ["2", 0],
+        "vae": ["1", 2]
+      },
+      "class_type": "SVD_img2vid_Conditioning"
+    },
+    "4": {
+      "inputs": {
+        "seed": 89412,
+        "steps": 25,
+        "cfg": 3.0,
+        "sampler_name": "euler",
+        "scheduler": "karras",
+        "denoise": 1.0,
+        "model": ["1", 0],
+        "positive": ["3", 0],
+        "negative": ["3", 1],
+        "latent_image": ["3", 2]
+      },
+      "class_type": "KSampler"
+    },
+    "5": {
+      "inputs": {
+        "samples": ["4", 0],
+        "vae": ["1", 2]
+      },
+      "class_type": "VAEDecode"
+    },
+    "6": {
+      "inputs": {
+        "fps": 24,
+        "filename_prefix": "VICKY_AI_SVD",
+        "format": "video/h264-mp4",
+        "images": ["5", 0]
+      },
+      "class_type": "VHS_VideoCombine"
+    }
+  }
+}

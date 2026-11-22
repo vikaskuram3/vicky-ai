@@ -1,0 +1,50 @@
+[
+  {
+    "id": "char_kalyan",
+    "user_id": null,
+    "name": "Kalyan",
+    "archetype": "Mass Cyberpunk Hero",
+    "avatar": "/samples/ai_robot_portrait_thumb.jpg",
+    "visual_traits": "Athletic 30yo Indian hero, sharp jawline, intense focused gaze, silver-streaked dark hair, neon teal cybernetic visor, weathered leather tactical jacket with glowing purple accents",
+    "conditioning_tokens": "[Character: Kalyan, consistent male protagonist, futuristic Indian warrior, neon teal cyber visor, dark hair with silver streak, leather tactical jacket]",
+    "voice_profile": "te-IN / Cinematic Male Deep",
+    "seed": 88421,
+    "created_at": "2026-11-21T18:00:00Z"
+  },
+  {
+    "id": "char_sita",
+    "user_id": null,
+    "name": "Commander Sita",
+    "archetype": "Galactic Commander",
+    "avatar": "/samples/cosmic_nebula_thumb.jpg",
+    "visual_traits": "32yo female commander, majestic silver braid hair, radiant amber eyes, sleek golden and midnight-blue composite space armor, calm authoritative presence",
+    "conditioning_tokens": "[Character: Commander Sita, consistent female protagonist, galactic commander, silver braided hair, golden celestial armor, amber eyes]",
+    "voice_profile": "en-US-JennyNeural / Expressive Female",
+    "seed": 55219,
+    "created_at": "2026-11-21T18:00:00Z"
+  },
+  {
+    "id": "char_vikram",
+    "user_id": null,
+    "name": "Dr. Vikram",
+    "archetype": "Ancient Tech Archaeologist",
+    "avatar": "/samples/nature_waterfall_thumb.jpg",
+    "visual_traits": "38yo scholar adventurer, rimmed holographic monocle, weathered brown trench coat, antique bronze Vedic gauntlet, inquisitive intense expression",
+    "conditioning_tokens": "[Character: Dr. Vikram, consistent male adventurer, brown trench coat, antique bronze gauntlet, holographic monocle, rugged explorer]",
+    "voice_profile": "en-IN-PrabhatNeural / Indian English",
+    "seed": 31415,
+    "created_at": "2026-11-21T18:00:00Z"
+  },
+  {
+    "id": "char_aria",
+    "user_id": null,
+    "name": "Aria Kane",
+    "archetype": "Neo-Tokyo Investigator",
+    "avatar": "/samples/cyberpunk_city_thumb.jpg",
+    "visual_traits": "26yo cyberpunk detective, sleek dark bob cut with electric-blue underlights, glowing violet cybernetic iris, black high-collar trench coat, transparent umbrella",
+    "conditioning_tokens": "[Character: Aria Kane, consistent female detective, cyber eye, blue highlights in dark bob, high collar trench coat, cyberpunk style]",
+    "voice_profile": "en-GB-SoniaNeural / UK Expressive",
+    "seed": 92834,
+    "created_at": "2026-11-21T18:00:00Z"
+  }
+]

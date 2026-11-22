@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account | VICKY AI - ONE PROMPT. ONE STORY. ONE COMPLETE MOVIE.</title>
+  <meta name="description" content="Create your free VICKY AI account. Access One-Prompt Movie Maker, Consistent Character Memory, Telugu AI Studio, and 500 free generation credits.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Supabase JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <style>
+    :root {
+      --glow-purple: rgba(168, 85, 247, 0.4);
+      --glow-cyan: rgba(6, 182, 212, 0.4);
+      --electric-blue: #00f0ff;
+      --purple-accent: #8b5cf6;
+    }
+
+    body.auth-page {
+      background: #030308;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 24px;
+      overflow-x: hidden;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      position: relative;
+    }
+
+    #cinematicCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .ambient-glow-1 {
+      position: fixed;
+      top: 10%;
+      left: 15%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.18) 0%, rgba(3, 3, 8, 0) 70%);
+      filter: blur(65px);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .ambient-glow-2 {
+      position: fixed;
+      bottom: 10%;
+      right: 15%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.16) 0%, rgba(3, 3, 8, 0) 70%);
+      filter: blur(65px);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .auth-card {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 480px;
+      background: rgba(11, 14, 27, 0.78);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(139, 92, 246, 0.28);
+      border-radius: 20px;
+      padding: 36px 36px;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.8),
+                  0 0 35px -5px rgba(139, 92, 246, 0.25);
+      animation: cardAppear 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes cardAppear {
+      from { opacity: 0; transform: translateY(20px) scale(0.97); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .brand-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .brand-logo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.25), rgba(6, 182, 212, 0.25));
+      border: 1px solid rgba(139, 92, 246, 0.5);
+      box-shadow: 0 0 25px rgba(139, 92, 246, 0.4);
+      margin-bottom: 12px;
+    }
+
+    .brand-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #ffffff 30%, #c084fc 70%, #67e8f9 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 2px;
+    }
+
+    .brand-tagline {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #94a3b8;
+    }
+
+    .auth-subtitle {
+      color: #94a3b8;
+      font-size: 0.85rem;
+      margin-top: 6px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      margin-bottom: 6px;
+    }
+
+    .input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-icon {
+      position: absolute;
+      left: 14px;
+      color: #64748b;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .auth-input {
+      width: 100%;
+      height: 44px;
+      background: rgba(17, 24, 39, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      border-radius: 10px;
+      padding: 0 14px 0 42px;
+      color: #f8fafc;
+      font-size: 0.9rem;
+      font-family: inherit;
+      transition: all 0.25s ease;
+      outline: none;
+    }
+
+    .auth-input:focus {
+      border-color: #8b5cf6;
+      background: rgba(22, 30, 52, 0.9);
+      box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25),
+                  0 0 15px rgba(6, 182, 212, 0.2);
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #cbd5e1;
+      font-size: 0.8rem;
+      line-height: 1.4;
+      cursor: pointer;
+      user-select: none;
+      margin: 18px 0;
+    }
+
+    .checkbox-label input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: #8b5cf6;
+      cursor: pointer;
+      margin-top: 2px;
+    }
+
+    .checkbox-label a {
+      color: #c084fc;
+      text-decoration: underline;
+    }
+
+    .btn-create {
+      width: 100%;
+      height: 48px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 50%, #06b6d4 100%);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4);
+    }
+
+    .btn-create:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(139, 92, 246, 0.6), 0 0 15px rgba(6, 182, 212, 0.5);
+    }
+
+    .btn-create:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 20px 0;
+      color: #64748b;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .divider::before, .divider::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+    }
+
+    .divider span {
+      padding: 0 12px;
+    }
+
+    .btn-google {
+      width: 100%;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(17, 24, 39, 0.7);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      color: #f1f5f9;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      transition: all 0.25s ease;
+    }
+
+    .btn-google:hover {
+      background: rgba(30, 41, 59, 0.9);
+      border-color: rgba(139, 92, 246, 0.4);
+      transform: translateY(-1px);
+    }
+
+    .signup-footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+
+    .signup-footer a {
+      color: #c084fc;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .signup-footer a:hover {
+      color: #00f0ff;
+      text-decoration: underline;
+    }
+
+    .alert-banner {
+      display: none;
+      padding: 12px 14px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+
+    .alert-banner.error {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #fca5a5;
+    }
+
+    .alert-banner.success {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #86efac;
+    }
+
+    .verification-modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .verification-box {
+      width: 100%;
+      max-width: 440px;
+      background: #0f1322;
+      border: 1px solid rgba(6, 182, 212, 0.4);
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.9), 0 0 30px rgba(6, 182, 212, 0.3);
+    }
+  </style>
+</head>
+<body class="auth-page">
+
+  <!-- Cinematic Background Canvas -->
+  <canvas id="cinematicCanvas"></canvas>
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+
+  <!-- Sign Up Card -->
+  <div class="auth-card">
+    <div class="brand-header">
+      <div class="brand-logo-badge">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 10L20.5 6.5V17.5L15 14" stroke="#00f0ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="2" y="6" width="13" height="12" rx="3" stroke="#a855f7" stroke-width="2"/>
+          <circle cx="8.5" cy="12" r="2.5" fill="#a855f7"/>
+        </svg>
+      </div>
+      <h1 class="brand-title">VICKY AI</h1>
+      <div class="brand-tagline">ONE PROMPT. ONE STORY. ONE COMPLETE MOVIE.</div>
+      <p class="auth-subtitle">Create your account to unlock AI Video Studio & 500 Credits</p>
+    </div>
+
+    <!-- Alert Banner -->
+    <div id="signupAlert" class="alert-banner"></div>
+
+    <!-- Registration Form -->
+    <form id="signupForm" onsubmit="handleSignupSubmit(event)">
+      <!-- Full Name -->
+      <div class="form-group">
+        <label class="form-label" for="signupName">Full Name</label>
+        <div class="input-wrapper">
+          <span class="input-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </span>
+          <input type="text" id="signupName" class="auth-input" placeholder="Arjun Sharma" required autocomplete="name">
+        </div>
+      </div>
+
+      <!-- Email Address -->
+      <div class="form-group">
+        <label class="form-label" for="signupEmail">Email Address</label>
+        <div class="input-wrapper">
+          <span class="input-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </span>
+          <input type="email" id="signupEmail" class="auth-input" placeholder="creator@vickyai.com" required autocomplete="email">
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label class="form-label" for="signupPassword">Password</label>
+        <div class="input-wrapper">
+          <span class="input-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </span>
+          <input type="password" id="signupPassword" class="auth-input" placeholder="At least 6 characters" required autocomplete="new-password">
+        </div>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="form-group">
+        <label class="form-label" for="signupConfirmPassword">Confirm Password</label>
+        <div class="input-wrapper">
+          <span class="input-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </span>
+          <input type="password" id="signupConfirmPassword" class="auth-input" placeholder="Re-enter password" required autocomplete="new-password">
+        </div>
+      </div>
+
+      <!-- Terms & Privacy Agreement -->
+      <label class="checkbox-label">
+        <input type="checkbox" id="agreeTerms" required>
+        <span>I agree to the <a href="#terms" onclick="event.preventDefault(); openTerms();">Terms of Service</a> and <a href="#privacy" onclick="event.preventDefault(); openPrivacy();">Privacy Policy</a>.</span>
+      </label>
+
+      <!-- Account Creation Button -->
+      <button type="submit" id="btnCreateAccount" class="btn-create">
+        <span id="btnCreateText">Create Account</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+
+      <!-- Divider -->
+      <div class="divider">
+        <span>or sign up with</span>
+      </div>
+
+      <!-- Google Signup -->
+      <button type="button" class="btn-google" onclick="handleGoogleSignUp()">
+        <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.3 9 5 12 5z"/><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.7-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/><path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3 0-.8.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15.1c0 2.8.7 5.4 1.9 7.8l3.7-3.1z"/><path fill="#34A853" d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2-6.4-4.8L1.9 16.6C3.7 20.4 7.5 23 12 23z"/></svg>
+        <span>Sign up with Google</span>
+      </button>
+
+      <!-- Already have account -->
+      <div class="signup-footer">
+        Already have an account? <a href="/login">Sign in</a>
+      </div>
+    </form>
+  </div>
+
+  <!-- Email Verification Modal -->
+  <div id="verificationModal" class="verification-modal">
+    <div class="verification-box">
+      <div style="width:60px; height:60px; border-radius:50%; background:rgba(6, 182, 212, 0.2); border:1px solid #06b6d4; display:inline-flex; align-items:center; justify-content:center; margin-bottom:16px;">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00f0ff" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      </div>
+      <h3 style="color:#ffffff; font-size:1.35rem; font-family:'Space Grotesk',sans-serif; margin-bottom:8px;">Account Created!</h3>
+      <p style="color:#94a3b8; font-size:0.9rem; line-height:1.5; margin-bottom:20px;">
+        A confirmation verification email has been sent to <strong id="verifiedEmailTarget" style="color:#00f0ff;">your email</strong>. Please check your inbox to confirm your account and activate your 500 free credits.
+      </p>
+      <button class="btn-create" onclick="proceedToDashboard()">
+        <span>Enter Studio Dashboard</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Legal Modal for Terms & Privacy -->
+  <div id="legalModal" class="verification-modal" style="display:none;" onclick="if(event.target===this) this.style.display='none'">
+    <div class="verification-box" style="max-width:540px; text-align:left;">
+      <h3 id="legalModalTitle" style="color:#ffffff; font-size:1.35rem; font-family:'Space Grotesk',sans-serif; margin-bottom:12px;">Terms of Service</h3>
+      <div id="legalModalContent" style="color:#cbd5e1; font-size:0.88rem; line-height:1.6; max-height:280px; overflow-y:auto; margin-bottom:20px;">
+      </div>
+      <button class="btn-create" style="width:100%; justify-content:center;" onclick="document.getElementById('legalModal').style.display='none'">
+        <span>Close</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Supabase Auth Logic & Canvas -->
+  <script src="/js/supabase_auth.js"></script>
+  <script>
+    function openTerms() {
+      document.getElementById('legalModalTitle').textContent = 'Terms of Service';
+      document.getElementById('legalModalContent').innerHTML = `
+        <p><strong>1. Intellectual Property:</strong> VICKY AI grants creators 100% full commercial and artistic ownership of all generated videos, movies, screenplays, and audio assets.</p>
+        <p><strong>2. Free Open-Source Core:</strong> Procedural synthesis and open-source models are completely free without paywalls or required subscriptions.</p>
+        <p><strong>3. Distribution:</strong> You may freely monetize your exported MP4 videos across YouTube, TikTok, Instagram Reels, and theatrical exhibitions.</p>
+      `;
+      document.getElementById('legalModal').style.display = 'flex';
+    }
+
+    function openPrivacy() {
+      document.getElementById('legalModalTitle').textContent = 'Privacy Policy';
+      document.getElementById('legalModalContent').innerHTML = `
+        <p><strong>1. Creator Privacy:</strong> Your story prompts, character descriptions, and screenplays are treated as private creative intellectual property.</p>
+        <p><strong>2. Secure Auth:</strong> All authentication tokens and passwords are encrypted and hashed using Supabase cryptographic security standards.</p>
+        <p><strong>3. Zero Telemetry Selling:</strong> We do not sell your personal data or creative generation prompts to third-party data brokers.</p>
+      `;
+      document.getElementById('legalModal').style.display = 'flex';
+    }
+    function showAlert(msg, isError = true) {
+      const alert = document.getElementById('signupAlert');
+      alert.className = `alert-banner ${isError ? 'error' : 'success'}`;
+      alert.textContent = msg;
+      alert.style.display = 'block';
+    }
+
+    async function handleSignupSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('signupName').value.trim();
+      const email = document.getElementById('signupEmail').value.trim();
+      const password = document.getElementById('signupPassword').value;
+      const confirm = document.getElementById('signupConfirmPassword').value;
+      const agree = document.getElementById('agreeTerms').checked;
+      const btn = document.getElementById('btnCreateAccount');
+      const btnText = document.getElementById('btnCreateText');
+
+      if (password !== confirm) {
+        showAlert('Passwords do not match. Please re-enter.');
+        return;
+      }
+
+      btn.disabled = true;
+      btnText.textContent = 'Creating account...';
+
+      try {
+        const res = await VickyAuth.register(name, email, password, agree);
+        document.getElementById('verifiedEmailTarget').textContent = email;
+        document.getElementById('verificationModal').style.display = 'flex';
+      } catch (err) {
+        showAlert(err.message || 'Registration failed.');
+        btn.disabled = false;
+        btnText.textContent = 'Create Account';
+      }
+    }
+
+    async function handleGoogleSignUp() {
+      try {
+        await VickyAuth.signInWithGoogle();
+      } catch (err) {
+        showAlert(err.message || 'Google sign up failed.');
+      }
+    }
+
+    function proceedToDashboard() {
+      window.location.href = '/dashboard';
+    }
+
+    // Animated Background Canvas
+    (function initCinematicCanvas() {
+      const canvas = document.getElementById('cinematicCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let w, h;
+      let particles = [];
+
+      function resize() {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      class Particle {
+        constructor() {
+          this.reset();
+        }
+        reset() {
+          this.x = Math.random() * w;
+          this.y = Math.random() * h;
+          this.size = Math.random() * 2 + 0.5;
+          this.speedX = (Math.random() - 0.5) * 0.4;
+          this.speedY = (Math.random() - 0.5) * 0.4;
+          this.opacity = Math.random() * 0.6 + 0.1;
+          this.color = Math.random() > 0.5 ? '#8b5cf6' : '#06b6d4';
+        }
+        update() {
+          this.x += this.speedX;
+          this.y += this.speedY;
+          if (this.x < 0 || this.x > w || this.y < 0 || this.y > h) this.reset();
+        }
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fillStyle = this.color;
+          ctx.globalAlpha = this.opacity;
+          ctx.fill();
+        }
+      }
+
+      for (let i = 0; i < 70; i++) particles.push(new Particle());
+
+      function animate() {
+        ctx.clearRect(0, 0, w, h);
+        particles.forEach(p => {
+          p.update();
+          p.draw();
+        });
+        requestAnimationFrame(animate);
+      }
+      animate();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  vicky-ai:
+    build: .
+    container_name: vicky-ai-platform
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+      - "8000:8000"
+    environment:
+      - PORT=3000
+      - HOST=0.0.0.0
+      - NODE_ENV=production
+      - VICKY_SITE_URL=https://vickyai.com
+      - COMFYUI_ENABLED=false
+      - USE_GPU=false
+    volumes:
+      - ./data/outputs:/app/data/outputs
+      - ./data/projects.json:/app/data/projects.json
+      - ./data/users.json:/app/data/users.json

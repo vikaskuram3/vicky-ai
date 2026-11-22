@@ -1,0 +1,31 @@
+# VICKY AI - Search Engine Robots Configuration
+# https://vickyai.com/robots.txt
+
+User-agent: *
+Allow: /
+Allow: /generator
+Allow: /text-to-video
+Allow: /image-to-video
+Allow: /script-generator
+Allow: /voice-generator
+Allow: /video-editor
+Allow: /projects
+Allow: /about
+Allow: /contact
+
+# Disallow authenticated session data & internal output storage raw endpoints
+Disallow: /api/
+Disallow: /data/
+
+# Googlebot specific optimizations
+User-agent: Googlebot
+Allow: /
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.svg$
+Allow: /*.mp4$
+
+# Sitemap index
+Sitemap: https://vickyai.com/sitemap.xml
