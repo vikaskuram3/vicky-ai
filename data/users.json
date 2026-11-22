@@ -8,7 +8,7 @@
     "credits_total": 500,
     "credits_used": 12,
     "created_at": "2026-11-21T09:00:00.000Z",
-    "token": "a16b4123a87af5b360d2da2f9e53dc193a7f35bc8eb9e6e40a9809b80568ac72"
+    "token": "72bf132228b50073033619dfec8492252e864669e98adf8445ffad8b40adeda4"
   },
   {
     "id": "usr_1795270511839",
@@ -555,5 +555,71 @@
     "credits_total": 500,
     "credits_used": 0,
     "created_at": "2026-11-22T09:10:47.897Z"
+  },
+  {
+    "id": "usr_1795339124398",
+    "name": "vicky",
+    "email": "vicky@gmail.com",
+    "token": "5775aa50206083900a78c8cd2d3b27f2fadf32df62d204fa53aef23ca1f864fd",
+    "password_hash": "3a147a0643e7ad80a70963ab3153dd15c42d5f4587b7975debdc4d57f887a5ff",
+    "plan": "Pro Studio Creator",
+    "credits_total": 500,
+    "credits_used": 0,
+    "created_at": "2026-11-22T09:18:44.398Z"
+  },
+  {
+    "id": "usr_google_1795340028168",
+    "name": "creator",
+    "email": "creator@gmail.com",
+    "token": "20f8d298c651ea45b08bf47790a115992839d46d5d8565b1270e02c9670efc23",
+    "provider": "google",
+    "plan": "Pro Studio Creator",
+    "credits_total": 500,
+    "credits_used": 0,
+    "created_at": "2026-11-22T09:33:48.168Z"
+  },
+  {
+    "id": "usr_1795340824043",
+    "name": "Alice Creator",
+    "email": "alice_1795340824042@test.com",
+    "token": "fb67ce9f483c200fe1a5b064199fca0db12defa817be8809762c630ad5cac992",
+    "password_hash": "8c21e471c534c0165971a2ece03252030408c09c593bc2db8c2c85e0c75783ab",
+    "plan": "Pro Studio Creator",
+    "credits_total": 500,
+    "credits_used": 0,
+    "created_at": "2026-11-22T09:47:04.043Z"
+  },
+  {
+    "id": "usr_1795340824045",
+    "name": "Bob Creator",
+    "email": "bob_1795340824042@test.com",
+    "token": "3e8f955979119c18f6e23a7708d8cc458b6cd8d0fc22ccd4118ef85de051f7de",
+    "password_hash": "fb1d02e3e26f41ab9b66f6e11e80470fe8d04d08c4393e83b94a42e9992f62ce",
+    "plan": "Pro Studio Creator",
+    "credits_total": 500,
+    "credits_used": 0,
+    "created_at": "2026-11-22T09:47:04.045Z"
+  },
+  {
+    "id": "usr_1795340830342",
+    "name": "Arjun Creator",
+    "email": "creator_1795340830334@vickyai.com",
+    "token": "e7bb33188e25da02ba67d7a436ab00f00105bffd6f4fbefef9453f453207b857",
+    "password_hash": "dda69783f28fdf6f1c5a83e8400f2472e9300887d1dffffe12a07b92a3d0aa25",
+    "plan": "Pro Studio Creator",
+    "credits_total": 500,
+    "credits_used": 0,
+    "created_at": "2026-11-22T09:47:10.342Z"
+  },
+  {
+    "id": "usr_google_1795340830352",
+    "name": "Google Creator",
+    "email": "google_1795340830351@gmail.com",
+    "token": "8f4a4eea8514901802d3cf2bb6e8ca52448d111f88e77ef1baa7c5dbb910cfe8",
+    "provider": "google",
+    "plan": "Pro Studio Creator",
+    "credits_total": 500,
+    "credits_used": 0,
+    "created_at": "2026-11-22T09:47:10.352Z"
   }
 ]

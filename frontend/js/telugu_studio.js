@@ -197,7 +197,8 @@ const VickyTeluguStudio = {
 
     try {
       const activeChar = window.VickyCharacterMemory ? VickyCharacterMemory.getActive() : null;
-      const res = await fetch('/api/generate/movie', {
+      const apiEndpoint = (window.VickyConfig && window.VickyConfig.getApiUrl) ? window.VickyConfig.getApiUrl('/api/generate/movie') : '/api/generate/movie';
+      const res = await fetch(apiEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

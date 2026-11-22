@@ -17,6 +17,18 @@
   ],
   "routes": [
     {
+      "src": "/login",
+      "dest": "/frontend/login.html"
+    },
+    {
+      "src": "/signup",
+      "dest": "/frontend/signup.html"
+    },
+    {
+      "src": "/dashboard",
+      "dest": "/frontend/index.html"
+    },
+    {
       "src": "/sitemap.xml",
       "dest": "/public/sitemap.xml",
       "headers": {
@@ -62,7 +74,12 @@
     },
     {
       "src": "/api/(.*)",
-      "dest": "/server.js"
+      "dest": "/server.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization, x-user-id, x-auth-token"
+      }
     },
     {
       "src": "/health",

@@ -196,7 +196,8 @@ const VickyApp = {
         }
 
         try {
-          const res = await fetch('/api/seo/verify', {
+          const verifyUrl = (window.VickyConfig && window.VickyConfig.getApiUrl) ? window.VickyConfig.getApiUrl('/api/seo/verify') : '/api/seo/verify';
+          const res = await fetch(verifyUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ verification_token: token })
@@ -214,14 +215,27 @@ const VickyApp = {
 
   // Settings view initialization
   initSettings() {
+    const backendInput = document.getElementById('settingsBackendUrl');
+    if (backendInput && window.VickyConfig) {
+      backendInput.value = window.VickyConfig.backendUrl || '';
+    }
+    const sbUrlInput = document.getElementById('settingsSupabaseUrl');
+    const sbKeyInput = document.getElementById('settingsSupabaseKey');
+    if (sbUrlInput) sbUrlInput.value = localStorage.getItem('vicky_custom_sb_url') || '';
+    if (sbKeyInput) sbKeyInput.value = localStorage.getItem('vicky_custom_sb_key') || '';
+
     const btnSaveKeys = document.getElementById('btnSaveSettings');
     if (btnSaveKeys) {
       btnSaveKeys.addEventListener('click', () => {
         const sbUrl = document.getElementById('settingsSupabaseUrl')?.value.trim();
         const sbKey = document.getElementById('settingsSupabaseKey')?.value.trim();
+        const backendUrl = document.getElementById('settingsBackendUrl')?.value.trim();
+
         if (sbUrl) localStorage.setItem('vicky_custom_sb_url', sbUrl);
         if (sbKey) localStorage.setItem('vicky_custom_sb_key', sbKey);
-        this.showToast('Settings saved successfully!', 'success');
+        if (window.VickyConfig) window.VickyConfig.setBackendUrl(backendUrl);
+
+        this.showToast('Production settings & credentials saved!', 'success');
       });
     }
   }

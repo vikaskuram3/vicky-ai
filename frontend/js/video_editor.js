@@ -81,7 +81,8 @@ const VickyEditor = {
         burn_subtitles: this.burnSubtitles
       };
 
-      const res = await fetch('/api/editor/render', {
+      const apiEndpoint = (window.VickyConfig && window.VickyConfig.getApiUrl) ? window.VickyConfig.getApiUrl('/api/editor/render') : '/api/editor/render';
+      const res = await fetch(apiEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)

@@ -125,7 +125,8 @@ const VickySocialExport = {
     if (!listContainer) return;
 
     try {
-      const res = await fetch('/api/projects');
+      const apiEndpoint = (window.VickyConfig && window.VickyConfig.getApiUrl) ? window.VickyConfig.getApiUrl('/api/projects') : '/api/projects';
+      const res = await fetch(apiEndpoint);
       const data = await res.json();
       const projects = (data && data.projects) || [];
 

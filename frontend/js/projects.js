@@ -21,7 +21,8 @@ const VickyProjects = {
       if (token) headers['Authorization'] = `Bearer ${token}`;
       if (user && user.id) headers['x-user-id'] = user.id;
 
-      const res = await fetch('/api/projects', { headers });
+      const apiUrl = (window.VickyConfig && window.VickyConfig.getApiUrl) ? window.VickyConfig.getApiUrl('/api/projects') : '/api/projects';
+      const res = await fetch(apiUrl, { headers });
       const data = await res.json();
       this.projects = data.projects || [];
       this.renderProjects(this.projects);
@@ -91,7 +92,8 @@ const VickyProjects = {
       if (token) headers['Authorization'] = `Bearer ${token}`;
       if (user && user.id) headers['x-user-id'] = user.id;
 
-      const res = await fetch(`/api/projects/${id}`, { method: 'DELETE', headers });
+      const delUrl = (window.VickyConfig && window.VickyConfig.getApiUrl) ? window.VickyConfig.getApiUrl(`/api/projects/${id}`) : `/api/projects/${id}`;
+      const res = await fetch(delUrl, { method: 'DELETE', headers });
       const data = await res.json();
       if (data.success) {
         this.projects = this.projects.filter(p => p.id !== id);

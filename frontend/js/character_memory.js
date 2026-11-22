@@ -64,7 +64,8 @@ const VickyCharacterMemory = {
 
     // Also fetch latest from backend
     try {
-      const res = await fetch('/api/characters');
+      const apiEndpoint = (window.VickyConfig && window.VickyConfig.getApiUrl) ? window.VickyConfig.getApiUrl('/api/characters') : '/api/characters';
+      const res = await fetch(apiEndpoint);
       if (res.ok) {
         const data = await res.json();
         if (data.characters && data.characters.length > 0) {
@@ -117,7 +118,8 @@ const VickyCharacterMemory = {
 
     // Sync to backend
     try {
-      await fetch('/api/characters', {
+      const apiEndpoint = (window.VickyConfig && window.VickyConfig.getApiUrl) ? window.VickyConfig.getApiUrl('/api/characters') : '/api/characters';
+      await fetch(apiEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newChar)
@@ -142,7 +144,8 @@ const VickyCharacterMemory = {
     this.notifyChange();
 
     try {
-      await fetch(`/api/characters/${id}`, { method: 'DELETE' });
+      const delEndpoint = (window.VickyConfig && window.VickyConfig.getApiUrl) ? window.VickyConfig.getApiUrl(`/api/characters/${id}`) : `/api/characters/${id}`;
+      await fetch(delEndpoint, { method: 'DELETE' });
     } catch (e) {}
   },
 

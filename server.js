@@ -307,10 +307,14 @@ async function handleRequest(req, res) {
   const parsedUrl = { pathname, query: parsedQuery, searchParams: reqUrl.searchParams };
   const method = req.method.toUpperCase();
 
-  // CORS Headers
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  // Comprehensive CORS & Preflight Headers
+  const originHeader = (req.headers && req.headers.origin) || '*';
+  res.setHeader('Access-Control-Allow-Origin', originHeader);
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, x-user-id, x-auth-token');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, x-user-id, x-auth-token, Accept, Range');
+  if (originHeader !== '*') {
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+  }
 
   if (method === 'OPTIONS') {
     res.writeHead(204);

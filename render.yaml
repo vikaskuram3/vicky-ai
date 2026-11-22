@@ -1,0 +1,35 @@
+# VICKY AI VIDEO STUDIO - Render Blueprint Specification
+# Deploys containerized Node.js API Gateway + Python AI Video Synthesizer + FFmpeg
+services:
+  - type: web
+    name: vicky-ai-backend
+    runtime: image
+    image:
+      url: docker.io/library/vicky-ai:latest # Or build from Dockerfile in repo
+    plan: starter
+    region: oregon
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: HOST
+        value: 0.0.0.0
+      - key: NODE_ENV
+        value: production
+      - key: VICKY_SITE_URL
+        value: https://vickyai.com
+      - key: VITE_SUPABASE_URL
+        sync: false
+      - key: VITE_SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: USE_GPU
+        value: false
+      - key: DEFAULT_MODEL
+        value: ffmpeg-procedural

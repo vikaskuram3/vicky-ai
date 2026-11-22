@@ -862,8 +862,13 @@
               <input type="password" id="settingsSupabaseKey" class="auth-input" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." style="padding-left:14px;">
             </div>
 
+            <div class="form-group">
+              <label class="form-label">Production Backend API URL (Optional for Render/Railway)</label>
+              <input type="text" id="settingsBackendUrl" class="auth-input" placeholder="https://vicky-ai-backend.onrender.com (leave blank for same-origin)" style="padding-left:14px;">
+            </div>
+
             <button type="button" id="btnSaveSettings" class="btn-cta" style="padding:10px 20px; margin-top:10px;">
-              Save Supabase Keys
+              Save Production Settings
             </button>
           </div>
 
@@ -1097,7 +1102,8 @@
       btn.innerHTML = `<span class="spinner-sm"></span> Animating with SVD-XT...`;
 
       try {
-        const res = await fetch('/api/generate/image-to-video', {
+        const apiEndpoint = (window.VickyConfig && window.VickyConfig.getApiUrl) ? window.VickyConfig.getApiUrl('/api/generate/image-to-video') : '/api/generate/image-to-video';
+        const res = await fetch(apiEndpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

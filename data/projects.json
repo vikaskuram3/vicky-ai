@@ -1,5 +1,194 @@
 [
   {
+    "id": "proj_movie_1795340833213",
+    "user_id": "usr_vicky_creator",
+    "is_private": true,
+    "title": "Movie: Cyberpunk journey into the neo...",
+    "prompt": "Cyberpunk journey into the neon nexus",
+    "type": "movie",
+    "model": "one-prompt-movie-maker",
+    "aspect_ratio": "16:9",
+    "duration": 3.5,
+    "fps": 12,
+    "video_url": "/outputs/vicky_movie_1795340830948.mp4",
+    "thumbnail_url": "/outputs/vicky_movie_1795340830948_thumb.jpg",
+    "created_at": "2026-11-22T09:47:13.213Z",
+    "tags": [
+      "Movie",
+      "2 Scenes",
+      "16:9",
+      "VICKY AI"
+    ]
+  },
+  {
+    "id": "proj_1795340100732",
+    "user_id": "usr_google_1795340028168",
+    "is_private": true,
+    "title": "[Character: Kalyan, consistent male...",
+    "prompt": "[Character: Kalyan, consistent male protagonist, futuristic Indian warrior, neon teal cyber visor, dark hair with silver streak, leather tactical jacket] Futuristic city, volumetric god rays streaming through atmosphere",
+    "type": "text-to-video",
+    "model": "ffmpeg-procedural",
+    "aspect_ratio": "16:9",
+    "duration": 3,
+    "fps": 24,
+    "video_url": "/outputs/vicky_t2v_1795340098424.mp4",
+    "thumbnail_url": "/outputs/vicky_t2v_1795340098424_thumb.jpg",
+    "created_at": "2026-11-22T09:35:00.732Z",
+    "tags": [
+      "ffmpeg-procedural",
+      "16:9",
+      "3s",
+      "H.264 MP4"
+    ]
+  },
+  {
+    "id": "proj_movie_1795339436203",
+    "user_id": "usr_vicky_creator",
+    "is_private": true,
+    "title": "Movie: Mass hero introduction in a ru...",
+    "prompt": "Mass hero introduction in a rural dust storm with heavy brass elevation and fiery slow-motion action",
+    "type": "movie",
+    "model": "one-prompt-movie-maker",
+    "aspect_ratio": "16:9",
+    "duration": 16.9,
+    "fps": 16,
+    "video_url": "/outputs/vicky_movie_1795339429054.mp4",
+    "thumbnail_url": "/outputs/vicky_movie_1795339429054_thumb.jpg",
+    "created_at": "2026-11-22T09:23:56.203Z",
+    "tags": [
+      "Movie",
+      "4 Scenes",
+      "16:9",
+      "VICKY AI"
+    ]
+  },
+  {
+    "id": "proj_1795339360195",
+    "user_id": "usr_vicky_creator",
+    "is_private": true,
+    "title": "Image Animation: Dynamic camera motion",
+    "prompt": "Dynamic camera motion",
+    "type": "image-to-video",
+    "model": "ffmpeg-procedural",
+    "aspect_ratio": "16:9",
+    "duration": 3,
+    "fps": 16,
+    "video_url": "/outputs/vicky_i2v_1795339356138.mp4",
+    "thumbnail_url": "/outputs/vicky_i2v_1795339356138_thumb.jpg",
+    "created_at": "2026-11-22T09:22:40.195Z",
+    "tags": [
+      "ffmpeg-procedural",
+      "Image to Video",
+      "16:9",
+      "H.264 MP4"
+    ]
+  },
+  {
+    "id": "proj_1795339326995",
+    "user_id": "usr_vicky_creator",
+    "is_private": true,
+    "title": "Image Animation: Dynamic camera motion",
+    "prompt": "Dynamic camera motion",
+    "type": "image-to-video",
+    "model": "ffmpeg-procedural",
+    "aspect_ratio": "16:9",
+    "duration": 3,
+    "fps": 16,
+    "video_url": "/outputs/vicky_i2v_1795339323339.mp4",
+    "thumbnail_url": "/outputs/vicky_i2v_1795339323339_thumb.jpg",
+    "created_at": "2026-11-22T09:22:06.995Z",
+    "tags": [
+      "ffmpeg-procedural",
+      "Image to Video",
+      "16:9",
+      "H.264 MP4"
+    ]
+  },
+  {
+    "id": "proj_1795339252275",
+    "user_id": "usr_1795339124398",
+    "is_private": true,
+    "title": "[Character: Kalyan, consistent male...",
+    "prompt": "[Character: Kalyan, consistent male protagonist, futuristic Indian warrior, neon teal cyber visor, dark hair with silver streak, leather tactical jacket] Act as a world-class Hollywood filmmaker, professional gaming documentary director, Telugu scriptwriter and video editor.\n\nCreate ONE complete 3-minute (180-second) cinematic YouTube documentary about GRAND THEFT AUTO VI (GTA 6).\n\nVIDEO TITLE:\nGTA 6 🔥 Complete Explanation in Telugu | Jason & Lucia | Vice City | Full Details\n\nVIDEO SETTINGS:\n- Duration: Exactly 180 seconds.\n- Landscape 16:9.\n- 4K or 1080p.\n- Professional cinematic documentary quality.\n- Natural Telugu male narration mixed with English gaming terminology.\n- Deep, powerful, energetic mass-hero delivery inspired by blockbuster Telugu cinema, but do NOT imitate or clone any real actor\\'s voice.\n- Add accurate Telugu subtitles synchronized with narration.\n\nSCENE 1 — INTRO (0:00–0:20)\nOpen with an explosive cinematic introduction. Show the GTA VI title, neon-lit Vice City, luxury supercars, beaches, helicopters and dramatic action.\nStart narration with:\n\"గేమింగ్ ప్రపంచంలో మరో కొత్త సంచలనం! ఎన్నో సంవత్సరాల ఎదురుచూపుల తర్వాత GTA 6 వచ్చేసింది! అసలు ఈ గేమ్‌లో ఏముంది? తెలుసుకుందాం!\"\n\nSCENE 2 — GTA 6 EXPLANATION (0:20–0:45)\nExplain Rockstar Games, the Grand Theft Auto series and the open-world gaming experience. Show cinematic city exploration and gameplay-style visuals.\n\nSCENE 3 — JASON AND LUCIA (0:45–1:10)\nIntroduce Jason and Lucia. Explain their partnership, relationship and criminal adventures. Show character-focused cinematic sequences.\n\nSCENE 4 — VICE CITY AND LEONIDA (1:10–1:35)\nShow beautiful beaches, skyscrapers, highways, nightlife, countryside and city environments. Explain the fictional state of Leonida and Vice City.\n\nSCENE 5 — GAMEPLAY AND FEATURES (1:35–2:10)\nShow driving, luxury vehicles, racing, police chases, missions, exploration, combat and character interactions. Explain the variety of activities players can experience.\n\nSCENE 6 — GRAPHICS AND REALISM (2:10–2:35)\nShow realistic character details, lighting, reflections, weather, water, vehicles, animations and environmental details. Explain the visual improvements.\n\nSCENE 7 — RELEASE AND PLATFORMS (2:35–2:48)\nGive verified information:\nGTA VI officially released on November 19, 2026.\nSupported platforms: PlayStation 5 and Xbox Series X|S.\nDo not invent a PC release date.\n\nSCENE 8 — POWERFUL ENDING (2:48–3:00)\nShow Jason and Lucia with a spectacular Vice City night background. Finish with a dramatic GTA VI title reveal.\n\nENDING NARRATION:\n\"మరి మీకు GTA 6 లో ఏ feature ఎక్కువగా నచ్చింది? కామెంట్ చేయండి! వీడియో నచ్చితే Like చేయండి, మీ ఫ్రెండ్స్‌తో Share చేయండి. మరిన్ని gaming videos కోసం Subscribe చేయండి!\"\n\nVISUAL AND EDITING REQUIREMENTS:\n- Cinematic camera movements and smooth transitions.\n- Dramatic background music.\n- Car engine sounds, police sirens and action sound effects.\n- Accurate Telugu subtitles.\n- No repetitive shots.\n- Synchronize visuals with narration.\n- Use official Rockstar GTA VI footage and properly licensed assets wherever possible.\n- Never present AI-generated fictional scenes as actual GTA VI gameplay.\n- Do not invent gameplay features or story details.\n- Maintain consistent character appearances for Jason and Lucia.\n\nTHUMBNAIL:\nCreate an attractive YouTube thumbnail featuring Jason and Lucia with Vice City in the background.\nAdd bold text:\n\"GTA 6 🔥\"\n\"3 నిమిషాల్లో పూర్తి వివరాలు!\"\n\nFINAL OUTPUT:\nCreate one complete, professionally edited 180-second MP4 video with Telugu narration, cinematic visuals, subtitles, background music and sound effects. Make the opening five seconds extremely engaging and maintain viewer interest until the end.",
+    "type": "text-to-video",
+    "model": "ffmpeg-procedural",
+    "aspect_ratio": "16:9",
+    "duration": 3,
+    "fps": 24,
+    "video_url": "/outputs/vicky_t2v_1795339250034.mp4",
+    "thumbnail_url": "/outputs/vicky_t2v_1795339250034_thumb.jpg",
+    "created_at": "2026-11-22T09:20:52.275Z",
+    "tags": [
+      "ffmpeg-procedural",
+      "16:9",
+      "3s",
+      "H.264 MP4"
+    ]
+  },
+  {
+    "id": "proj_1795339244190",
+    "user_id": "usr_1795339124398",
+    "is_private": true,
+    "title": "[Character: Kalyan, consistent male...",
+    "prompt": "[Character: Kalyan, consistent male protagonist, futuristic Indian warrior, neon teal cyber visor, dark hair with silver streak, leather tactical jacket] Act as a world-class Hollywood filmmaker, professional gaming documentary director, Telugu scriptwriter and video editor.\n\nCreate ONE complete 3-minute (180-second) cinematic YouTube documentary about GRAND THEFT AUTO VI (GTA 6).\n\nVIDEO TITLE:\nGTA 6 🔥 Complete Explanation in Telugu | Jason & Lucia | Vice City | Full Details\n\nVIDEO SETTINGS:\n- Duration: Exactly 180 seconds.\n- Landscape 16:9.\n- 4K or 1080p.\n- Professional cinematic documentary quality.\n- Natural Telugu male narration mixed with English gaming terminology.\n- Deep, powerful, energetic mass-hero delivery inspired by blockbuster Telugu cinema, but do NOT imitate or clone any real actor\\'s voice.\n- Add accurate Telugu subtitles synchronized with narration.\n\nSCENE 1 — INTRO (0:00–0:20)\nOpen with an explosive cinematic introduction. Show the GTA VI title, neon-lit Vice City, luxury supercars, beaches, helicopters and dramatic action.\nStart narration with:\n\"గేమింగ్ ప్రపంచంలో మరో కొత్త సంచలనం! ఎన్నో సంవత్సరాల ఎదురుచూపుల తర్వాత GTA 6 వచ్చేసింది! అసలు ఈ గేమ్‌లో ఏముంది? తెలుసుకుందాం!\"\n\nSCENE 2 — GTA 6 EXPLANATION (0:20–0:45)\nExplain Rockstar Games, the Grand Theft Auto series and the open-world gaming experience. Show cinematic city exploration and gameplay-style visuals.\n\nSCENE 3 — JASON AND LUCIA (0:45–1:10)\nIntroduce Jason and Lucia. Explain their partnership, relationship and criminal adventures. Show character-focused cinematic sequences.\n\nSCENE 4 — VICE CITY AND LEONIDA (1:10–1:35)\nShow beautiful beaches, skyscrapers, highways, nightlife, countryside and city environments. Explain the fictional state of Leonida and Vice City.\n\nSCENE 5 — GAMEPLAY AND FEATURES (1:35–2:10)\nShow driving, luxury vehicles, racing, police chases, missions, exploration, combat and character interactions. Explain the variety of activities players can experience.\n\nSCENE 6 — GRAPHICS AND REALISM (2:10–2:35)\nShow realistic character details, lighting, reflections, weather, water, vehicles, animations and environmental details. Explain the visual improvements.\n\nSCENE 7 — RELEASE AND PLATFORMS (2:35–2:48)\nGive verified information:\nGTA VI officially released on November 19, 2026.\nSupported platforms: PlayStation 5 and Xbox Series X|S.\nDo not invent a PC release date.\n\nSCENE 8 — POWERFUL ENDING (2:48–3:00)\nShow Jason and Lucia with a spectacular Vice City night background. Finish with a dramatic GTA VI title reveal.\n\nENDING NARRATION:\n\"మరి మీకు GTA 6 లో ఏ feature ఎక్కువగా నచ్చింది? కామెంట్ చేయండి! వీడియో నచ్చితే Like చేయండి, మీ ఫ్రెండ్స్‌తో Share చేయండి. మరిన్ని gaming videos కోసం Subscribe చేయండి!\"\n\nVISUAL AND EDITING REQUIREMENTS:\n- Cinematic camera movements and smooth transitions.\n- Dramatic background music.\n- Car engine sounds, police sirens and action sound effects.\n- Accurate Telugu subtitles.\n- No repetitive shots.\n- Synchronize visuals with narration.\n- Use official Rockstar GTA VI footage and properly licensed assets wherever possible.\n- Never present AI-generated fictional scenes as actual GTA VI gameplay.\n- Do not invent gameplay features or story details.\n- Maintain consistent character appearances for Jason and Lucia.\n\nTHUMBNAIL:\nCreate an attractive YouTube thumbnail featuring Jason and Lucia with Vice City in the background.\nAdd bold text:\n\"GTA 6 🔥\"\n\"3 నిమిషాల్లో పూర్తి వివరాలు!\"\n\nFINAL OUTPUT:\nCreate one complete, professionally edited 180-second MP4 video with Telugu narration, cinematic visuals, subtitles, background music and sound effects. Make the opening five seconds extremely engaging and maintain viewer interest until the end.",
+    "type": "text-to-video",
+    "model": "ffmpeg-procedural",
+    "aspect_ratio": "16:9",
+    "duration": 3,
+    "fps": 24,
+    "video_url": "/outputs/vicky_t2v_1795339242015.mp4",
+    "thumbnail_url": "/outputs/vicky_t2v_1795339242015_thumb.jpg",
+    "created_at": "2026-11-22T09:20:44.190Z",
+    "tags": [
+      "ffmpeg-procedural",
+      "16:9",
+      "3s",
+      "H.264 MP4"
+    ]
+  },
+  {
+    "id": "proj_1795339191937",
+    "user_id": "usr_1795339124398",
+    "is_private": true,
+    "title": "[Character: Kalyan, consistent male...",
+    "prompt": "[Character: Kalyan, consistent male protagonist, futuristic Indian warrior, neon teal cyber visor, dark hair with silver streak, leather tactical jacket] Act as a world-class Hollywood filmmaker, professional gaming documentary director, Telugu scriptwriter and video editor.\n\nCreate ONE complete 3-minute (180-second) cinematic YouTube documentary about GRAND THEFT AUTO VI (GTA 6).\n\nVIDEO TITLE:\nGTA 6 🔥 Complete Explanation in Telugu | Jason & Lucia | Vice City | Full Details\n\nVIDEO SETTINGS:\n- Duration: Exactly 180 seconds.\n- Landscape 16:9.\n- 4K or 1080p.\n- Professional cinematic documentary quality.\n- Natural Telugu male narration mixed with English gaming terminology.\n- Deep, powerful, energetic mass-hero delivery inspired by blockbuster Telugu cinema, but do NOT imitate or clone any real actor\\'s voice.\n- Add accurate Telugu subtitles synchronized with narration.\n\nSCENE 1 — INTRO (0:00–0:20)\nOpen with an explosive cinematic introduction. Show the GTA VI title, neon-lit Vice City, luxury supercars, beaches, helicopters and dramatic action.\nStart narration with:\n\"గేమింగ్ ప్రపంచంలో మరో కొత్త సంచలనం! ఎన్నో సంవత్సరాల ఎదురుచూపుల తర్వాత GTA 6 వచ్చేసింది! అసలు ఈ గేమ్‌లో ఏముంది? తెలుసుకుందాం!\"\n\nSCENE 2 — GTA 6 EXPLANATION (0:20–0:45)\nExplain Rockstar Games, the Grand Theft Auto series and the open-world gaming experience. Show cinematic city exploration and gameplay-style visuals.\n\nSCENE 3 — JASON AND LUCIA (0:45–1:10)\nIntroduce Jason and Lucia. Explain their partnership, relationship and criminal adventures. Show character-focused cinematic sequences.\n\nSCENE 4 — VICE CITY AND LEONIDA (1:10–1:35)\nShow beautiful beaches, skyscrapers, highways, nightlife, countryside and city environments. Explain the fictional state of Leonida and Vice City.\n\nSCENE 5 — GAMEPLAY AND FEATURES (1:35–2:10)\nShow driving, luxury vehicles, racing, police chases, missions, exploration, combat and character interactions. Explain the variety of activities players can experience.\n\nSCENE 6 — GRAPHICS AND REALISM (2:10–2:35)\nShow realistic character details, lighting, reflections, weather, water, vehicles, animations and environmental details. Explain the visual improvements.\n\nSCENE 7 — RELEASE AND PLATFORMS (2:35–2:48)\nGive verified information:\nGTA VI officially released on November 19, 2026.\nSupported platforms: PlayStation 5 and Xbox Series X|S.\nDo not invent a PC release date.\n\nSCENE 8 — POWERFUL ENDING (2:48–3:00)\nShow Jason and Lucia with a spectacular Vice City night background. Finish with a dramatic GTA VI title reveal.\n\nENDING NARRATION:\n\"మరి మీకు GTA 6 లో ఏ feature ఎక్కువగా నచ్చింది? కామెంట్ చేయండి! వీడియో నచ్చితే Like చేయండి, మీ ఫ్రెండ్స్‌తో Share చేయండి. మరిన్ని gaming videos కోసం Subscribe చేయండి!\"\n\nVISUAL AND EDITING REQUIREMENTS:\n- Cinematic camera movements and smooth transitions.\n- Dramatic background music.\n- Car engine sounds, police sirens and action sound effects.\n- Accurate Telugu subtitles.\n- No repetitive shots.\n- Synchronize visuals with narration.\n- Use official Rockstar GTA VI footage and properly licensed assets wherever possible.\n- Never present AI-generated fictional scenes as actual GTA VI gameplay.\n- Do not invent gameplay features or story details.\n- Maintain consistent character appearances for Jason and Lucia.\n\nTHUMBNAIL:\nCreate an attractive YouTube thumbnail featuring Jason and Lucia with Vice City in the background.\nAdd bold text:\n\"GTA 6 🔥\"\n\"3 నిమిషాల్లో పూర్తి వివరాలు!\"\n\nFINAL OUTPUT:\nCreate one complete, professionally edited 180-second MP4 video with Telugu narration, cinematic visuals, subtitles, background music and sound effects. Make the opening five seconds extremely engaging and maintain viewer interest until the end.",
+    "type": "text-to-video",
+    "model": "ffmpeg-procedural",
+    "aspect_ratio": "16:9",
+    "duration": 3,
+    "fps": 24,
+    "video_url": "/outputs/vicky_t2v_1795339189762.mp4",
+    "thumbnail_url": "/outputs/vicky_t2v_1795339189762_thumb.jpg",
+    "created_at": "2026-11-22T09:19:51.937Z",
+    "tags": [
+      "ffmpeg-procedural",
+      "16:9",
+      "3s",
+      "H.264 MP4"
+    ]
+  },
+  {
+    "id": "proj_1795339177343",
+    "user_id": "usr_1795339124398",
+    "is_private": true,
+    "title": "[Character: Kalyan, consistent male...",
+    "prompt": "[Character: Kalyan, consistent male protagonist, futuristic Indian warrior, neon teal cyber visor, dark hair with silver streak, leather tactical jacket] Act as a world-class Hollywood filmmaker, professional gaming documentary director, Telugu scriptwriter and video editor.\n\nCreate ONE complete 3-minute (180-second) cinematic YouTube documentary about GRAND THEFT AUTO VI (GTA 6).\n\nVIDEO TITLE:\nGTA 6 🔥 Complete Explanation in Telugu | Jason & Lucia | Vice City | Full Details\n\nVIDEO SETTINGS:\n- Duration: Exactly 180 seconds.\n- Landscape 16:9.\n- 4K or 1080p.\n- Professional cinematic documentary quality.\n- Natural Telugu male narration mixed with English gaming terminology.\n- Deep, powerful, energetic mass-hero delivery inspired by blockbuster Telugu cinema, but do NOT imitate or clone any real actor\\'s voice.\n- Add accurate Telugu subtitles synchronized with narration.\n\nSCENE 1 — INTRO (0:00–0:20)\nOpen with an explosive cinematic introduction. Show the GTA VI title, neon-lit Vice City, luxury supercars, beaches, helicopters and dramatic action.\nStart narration with:\n\"గేమింగ్ ప్రపంచంలో మరో కొత్త సంచలనం! ఎన్నో సంవత్సరాల ఎదురుచూపుల తర్వాత GTA 6 వచ్చేసింది! అసలు ఈ గేమ్‌లో ఏముంది? తెలుసుకుందాం!\"\n\nSCENE 2 — GTA 6 EXPLANATION (0:20–0:45)\nExplain Rockstar Games, the Grand Theft Auto series and the open-world gaming experience. Show cinematic city exploration and gameplay-style visuals.\n\nSCENE 3 — JASON AND LUCIA (0:45–1:10)\nIntroduce Jason and Lucia. Explain their partnership, relationship and criminal adventures. Show character-focused cinematic sequences.\n\nSCENE 4 — VICE CITY AND LEONIDA (1:10–1:35)\nShow beautiful beaches, skyscrapers, highways, nightlife, countryside and city environments. Explain the fictional state of Leonida and Vice City.\n\nSCENE 5 — GAMEPLAY AND FEATURES (1:35–2:10)\nShow driving, luxury vehicles, racing, police chases, missions, exploration, combat and character interactions. Explain the variety of activities players can experience.\n\nSCENE 6 — GRAPHICS AND REALISM (2:10–2:35)\nShow realistic character details, lighting, reflections, weather, water, vehicles, animations and environmental details. Explain the visual improvements.\n\nSCENE 7 — RELEASE AND PLATFORMS (2:35–2:48)\nGive verified information:\nGTA VI officially released on November 19, 2026.\nSupported platforms: PlayStation 5 and Xbox Series X|S.\nDo not invent a PC release date.\n\nSCENE 8 — POWERFUL ENDING (2:48–3:00)\nShow Jason and Lucia with a spectacular Vice City night background. Finish with a dramatic GTA VI title reveal.\n\nENDING NARRATION:\n\"మరి మీకు GTA 6 లో ఏ feature ఎక్కువగా నచ్చింది? కామెంట్ చేయండి! వీడియో నచ్చితే Like చేయండి, మీ ఫ్రెండ్స్‌తో Share చేయండి. మరిన్ని gaming videos కోసం Subscribe చేయండి!\"\n\nVISUAL AND EDITING REQUIREMENTS:\n- Cinematic camera movements and smooth transitions.\n- Dramatic background music.\n- Car engine sounds, police sirens and action sound effects.\n- Accurate Telugu subtitles.\n- No repetitive shots.\n- Synchronize visuals with narration.\n- Use official Rockstar GTA VI footage and properly licensed assets wherever possible.\n- Never present AI-generated fictional scenes as actual GTA VI gameplay.\n- Do not invent gameplay features or story details.\n- Maintain consistent character appearances for Jason and Lucia.\n\nTHUMBNAIL:\nCreate an attractive YouTube thumbnail featuring Jason and Lucia with Vice City in the background.\nAdd bold text:\n\"GTA 6 🔥\"\n\"3 నిమిషాల్లో పూర్తి వివరాలు!\"\n\nFINAL OUTPUT:\nCreate one complete, professionally edited 180-second MP4 video with Telugu narration, cinematic visuals, subtitles, background music and sound effects. Make the opening five seconds extremely engaging and maintain viewer interest until the end.",
+    "type": "text-to-video",
+    "model": "ffmpeg-procedural",
+    "aspect_ratio": "16:9",
+    "duration": 3,
+    "fps": 24,
+    "video_url": "/outputs/vicky_t2v_1795339175270.mp4",
+    "thumbnail_url": "/outputs/vicky_t2v_1795339175270_thumb.jpg",
+    "created_at": "2026-11-22T09:19:37.343Z",
+    "tags": [
+      "ffmpeg-procedural",
+      "16:9",
+      "3s",
+      "H.264 MP4"
+    ]
+  },
+  {
     "id": "proj_movie_1795338649834",
     "user_id": "usr_vicky_creator",
     "is_private": true,

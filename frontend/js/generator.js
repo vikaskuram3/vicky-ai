@@ -50,7 +50,8 @@ const VickyGenerator = {
     const audText = document.getElementById('ffmpegAudioText');
 
     try {
-      const res = await fetch('/api/health/dependencies');
+      const depUrl = (window.VickyConfig && window.VickyConfig.getApiUrl) ? window.VickyConfig.getApiUrl('/api/health/dependencies') : '/api/health/dependencies';
+      const res = await fetch(depUrl);
       const data = await res.json();
       if (data.ffmpeg && data.ffmpeg.installed) {
         if (badge) {
@@ -340,7 +341,8 @@ const VickyGenerator = {
       if (token) reqHeaders['Authorization'] = `Bearer ${token}`;
       if (user && user.id) reqHeaders['x-user-id'] = user.id;
 
-      const res = await fetch(endpoint, {
+      const targetApi = (window.VickyConfig && window.VickyConfig.getApiUrl) ? window.VickyConfig.getApiUrl(endpoint) : endpoint;
+      const res = await fetch(targetApi, {
         method: 'POST',
         headers: reqHeaders,
         body: JSON.stringify(payload)

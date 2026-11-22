@@ -285,7 +285,8 @@ const VickyThumbnailStudio = {
 
     // Persist to backend thumbnail gallery
     try {
-      fetch('/api/thumbnails', {
+      const apiEndpoint = (window.VickyConfig && window.VickyConfig.getApiUrl) ? window.VickyConfig.getApiUrl('/api/thumbnails') : '/api/thumbnails';
+      fetch(apiEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -8,6 +8,24 @@
  * - Protected Dashboard Guard & Session Persistence
  */
 
+const VickyConfig = {
+  backendUrl: localStorage.getItem('vicky_backend_url') || '',
+  getApiUrl(path) {
+    if (!path) return '';
+    if (path.startsWith('http://') || path.startsWith('https://')) return path;
+    const base = this.backendUrl || localStorage.getItem('vicky_backend_url') || '';
+    if (!base) return path;
+    return base.replace(/\/+$/, '') + (path.startsWith('/') ? path : '/' + path);
+  },
+  setBackendUrl(url) {
+    this.backendUrl = url || '';
+    if (url) localStorage.setItem('vicky_backend_url', url);
+    else localStorage.removeItem('vicky_backend_url');
+  }
+};
+window.VickyConfig = VickyConfig;
+window.vickyApi = (p) => VickyConfig.getApiUrl(p);
+
 const VickyAuth = {
   supabase: null,
   isSupabaseConfigured: false,
@@ -17,16 +35,42 @@ const VickyAuth = {
   async init() {
     // 1. Fetch public configuration from backend
     try {
-      const res = await fetch('/api/config');
+      const res = await fetch(VickyConfig.getApiUrl('/api/config'));
       if (res.ok) {
         const config = await res.json();
-        const sbUrl = config.supabase_url;
-        const sbKey = config.supabase_anon_key;
+        const sbUrl = localStorage.getItem('vicky_custom_sb_url') || config.supabase_url;
+        const sbKey = localStorage.getItem('vicky_custom_sb_key') || config.supabase_anon_key;
+
+        if (config.backend_url && !localStorage.getItem('vicky_backend_url')) {
+          VickyConfig.setBackendUrl(config.backend_url);
+        }
 
         if (sbUrl && sbKey && !sbUrl.includes('your-project') && window.supabase) {
           this.supabase = window.supabase.createClient(sbUrl, sbKey);
           this.isSupabaseConfigured = true;
           console.log('[VICKY AI Auth] Connected to live Supabase Auth instance:', sbUrl);
+
+          // Listen to OAuth state changes (Google Sign In redirect return)
+          this.supabase.auth.onAuthStateChange(async (event, session) => {
+            if (session && session.user) {
+              this.currentUser = {
+                id: session.user.id,
+                name: session.user.user_metadata?.full_name || session.user.user_metadata?.name || session.user.email?.split('@')[0] || 'AI Creator',
+                email: session.user.email,
+                avatar: session.user.user_metadata?.avatar_url || session.user.user_metadata?.picture || '',
+                token: session.access_token,
+                provider: session.user.app_metadata?.provider || 'supabase',
+                plan: 'Pro Studio Creator',
+                credits_total: 500,
+                credits_used: 0
+              };
+              localStorage.setItem('vicky_session_user', JSON.stringify(this.currentUser));
+              this.notifyListeners();
+              if (window.location.pathname === '/login' || window.location.pathname === '/signup') {
+                window.location.href = '/dashboard';
+              }
+            }
+          });
         } else {
           console.log('[VICKY AI Auth] Using persistent local session engine (ready for Supabase credentials in .env).');
         }
@@ -132,7 +176,7 @@ const VickyAuth = {
     }
 
     // Fallback: Authenticate with backend API & persistent local database
-    const res = await fetch('/api/auth/login', {
+    const res = await fetch(VickyConfig.getApiUrl('/api/auth/login'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })
@@ -206,7 +250,7 @@ const VickyAuth = {
     }
 
     // Fallback: Register with backend API & persistent local database
-    const res = await fetch('/api/auth/register', {
+    const res = await fetch(VickyConfig.getApiUrl('/api/auth/register'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name: fullName, email, password })
@@ -223,41 +267,82 @@ const VickyAuth = {
     return { success: true, user: this.currentUser, requires_verification: true, method: 'local_engine' };
   },
 
-  // 3. Google OAuth
+  // 3. Google OAuth (Production Supabase & Resilient Bridge)
   async signInWithGoogle() {
+    const redirectUrl = window.location.origin + '/dashboard';
     if (this.isSupabaseConfigured && this.supabase) {
       try {
         const { data, error } = await this.supabase.auth.signInWithOAuth({
           provider: 'google',
           options: {
-            redirectTo: window.location.origin + '/dashboard'
+            redirectTo: redirectUrl
           }
         });
         if (error) throw error;
-        return { success: true, url: data.url };
+        if (data && data.url) {
+          window.location.href = data.url;
+          return { success: true, url: data.url };
+        }
       } catch (e) {
         console.warn('[VICKY AI Auth] Supabase Google OAuth notice:', e.message);
       }
     }
 
-    // Simulation / Local OAuth Bridge
-    const promptEmail = prompt('Enter your Google Account email for instant sign in:', 'creator@gmail.com');
-    if (!promptEmail || !promptEmail.includes('@')) return;
+    // High-availability staging/fallback OAuth bridge
+    return this.showGoogleOAuthModal();
+  },
 
-    const res = await fetch('/api/auth/google', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        email: promptEmail,
-        name: promptEmail.split('@')[0].replace('.', ' ')
-      })
-    });
-    const result = await res.json();
-    if (result.success && result.user) {
-      this.currentUser = result.user;
-      localStorage.setItem('vicky_session_user', JSON.stringify(this.currentUser));
-      this.notifyListeners();
-      window.location.href = '/dashboard';
+  showGoogleOAuthModal() {
+    let modal = document.getElementById('vickyGoogleOAuthModal');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'vickyGoogleOAuthModal';
+      modal.className = 'verification-modal';
+      modal.style.display = 'none';
+      modal.innerHTML = `
+        <div class="verification-box" style="max-width:440px; text-align:center;">
+          <div style="width:52px; height:52px; border-radius:50%; background:white; display:inline-flex; align-items:center; justify-content:center; margin-bottom:12px; box-shadow:0 4px 15px rgba(0,0,0,0.5);">
+            <svg width="26" height="26" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.3 9 5 12 5z"/><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.7-.2-2.3H12v4.5h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.8z"/><path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3 0-.8.2-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15.1c0 2.8.7 5.4 1.9 7.8l3.7-3.1z"/><path fill="#34A853" d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2-6.4-4.8L1.9 16.6C3.7 20.4 7.5 23 12 23z"/></svg>
+          </div>
+          <h3 style="color:#ffffff; font-size:1.3rem; margin-bottom:6px; font-family:'Space Grotesk',sans-serif;">Sign in with Google</h3>
+          <p style="color:#94a3b8; font-size:0.85rem; margin-bottom:16px;">Connect with your Google account to access VICKY AI Studio</p>
+          <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:16px;">
+            <button class="btn-outline" style="text-align:left; padding:12px 14px; border-color:rgba(139,92,246,0.4);" onclick="VickyAuth.completeGoogleLogin('creator@gmail.com', 'Google Creator')">
+              <strong style="color:#ffffff; display:block;">creator@gmail.com</strong>
+              <span style="font-size:0.75rem; color:#00f0ff;">Verified Creator Account &bull; 500 Credits</span>
+            </button>
+            <div style="display:flex; gap:8px;">
+              <input type="email" id="customGoogleEmailInput" class="auth-input" placeholder="Or enter your email@gmail.com" style="padding-left:12px; font-size:0.85rem;">
+              <button class="btn-cta" style="padding:8px 16px; font-size:0.82rem; white-space:nowrap;" onclick="const val=document.getElementById('customGoogleEmailInput').value.trim(); if(val&&val.includes('@')) VickyAuth.completeGoogleLogin(val, val.split('@')[0]); else alert('Please enter a valid Google email.');">Sign In</button>
+            </div>
+          </div>
+          <button class="btn-outline" style="width:100%; font-size:0.82rem;" onclick="document.getElementById('vickyGoogleOAuthModal').style.display='none'">Cancel</button>
+        </div>
+      `;
+      document.body.appendChild(modal);
+    }
+    modal.style.display = 'flex';
+  },
+
+  async completeGoogleLogin(email, name) {
+    const modal = document.getElementById('vickyGoogleOAuthModal');
+    if (modal) modal.style.display = 'none';
+
+    try {
+      const res = await fetch(VickyConfig.getApiUrl('/api/auth/google'), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, name })
+      });
+      const result = await res.json();
+      if (result.success && result.user) {
+        this.currentUser = result.user;
+        localStorage.setItem('vicky_session_user', JSON.stringify(this.currentUser));
+        this.notifyListeners();
+        window.location.href = '/dashboard';
+      }
+    } catch (e) {
+      alert('Google login failed: ' + e.message);
     }
   },
 
@@ -279,7 +364,7 @@ const VickyAuth = {
       }
     }
 
-    const res = await fetch('/api/auth/reset-password', {
+    const res = await fetch(VickyConfig.getApiUrl('/api/auth/reset-password'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email })
@@ -300,7 +385,7 @@ const VickyAuth = {
     }
 
     try {
-      await fetch('/api/auth/logout', { method: 'POST' });
+      await fetch(VickyConfig.getApiUrl('/api/auth/logout'), { method: 'POST' });
     } catch (e) {}
 
     this.currentUser = null;

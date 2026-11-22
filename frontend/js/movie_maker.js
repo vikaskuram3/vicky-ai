@@ -62,7 +62,8 @@ const VickyMovieMaker = {
     }
 
     try {
-      const res = await fetch('/api/director/generate', {
+      const apiEndpoint = (window.VickyConfig && window.VickyConfig.getApiUrl) ? window.VickyConfig.getApiUrl('/api/director/generate') : '/api/director/generate';
+      const res = await fetch(apiEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -198,7 +199,8 @@ const VickyMovieMaker = {
     }, 1200);
 
     try {
-      const res = await fetch('/api/generate/movie', {
+      const apiEndpoint = (window.VickyConfig && window.VickyConfig.getApiUrl) ? window.VickyConfig.getApiUrl('/api/generate/movie') : '/api/generate/movie';
+      const res = await fetch(apiEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
